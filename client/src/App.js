@@ -1,24 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Menu from './Components/Menu/Menu'
+import ItemContainer from './Components/ItemContainer/ItemContainer'
+import BoardsContainer from './Components/BoardsContainer/BoardsContainer'
+
+import {BrowserRouter, Route} from 'react-router-dom';
 
 class App extends Component {
-  state = {users: []}
-
-  componentDidMount() {
-    fetch('/users')
-      .then(res => res.json())
-      .then(users => this.setState({ users }));
-  }
-
   render() {
     return (
-      <div className="App">
-        <h1>Users</h1>
-        {this.state.users.map(user =>
-          <div key={user.id}>{user.username}</div>
-        )}
-      </div>
+
+      <BrowserRouter>
+        <div className="App">
+        <Menu/>
+        <Route exact path='/' component={ItemContainer}/>
+        <Route path='/boardsContainer' component={BoardsContainer}/>
+
+        </div>
+      </BrowserRouter>
+
     );
   }
 }

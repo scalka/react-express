@@ -1,3 +1,21 @@
+@import 'bulma/bulma';
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/*.itemCard {
+  width: 400px;
+  height: 100%;
+}*/
+
+.tag {
+  margin-right: 2px;
+}
+
 .App {
   text-align: center;
 }
