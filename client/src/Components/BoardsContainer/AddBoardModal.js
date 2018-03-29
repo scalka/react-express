@@ -38,12 +38,7 @@ class AddBoardModal extends Component {
     });
   }
 
-  handleSubmit() {
-
-  }
-
   render() {
-    console.log('modal');
     // Render nothing if the "show" prop is false
     if(!this.props.show) {
       return null;
@@ -51,16 +46,34 @@ class AddBoardModal extends Component {
     return (
       <div className="modal is-active">
         <div className="modal-background"></div>
-        <div className="modal-content">
+        <div className="modal-card">
+          <header className="modal-card-head">
+            <p className="modal-card-title">Add new board</p>
+            <button className="delete" aria-label="close" onClick={this.props.onClose}></button>
+          </header>
           <form onSubmit={this.addBoard}>
-            <label>Board name:
-              <input type='text' name="boardName" value={this.state.boardName} onChange={this.handleChange}/>
-            </label>
-            <input type="submit" value="Submit" />
+          <section className="modal-card-body">
+
+
+              <div className="field">
+                <label className="label">Board name:</label>
+                <div className="control">
+                  <input className="input" type='text' name="boardName" value={this.state.boardName} onChange={this.handleChange}/>
+                </div>
+              </div>
+
+
+
+
+          </section>
+          <footer className="modal-card-foot">
+            <input className="button is-success" type="submit" value="Submit" />
+            <button className="button">Cancel</button>
+          </footer>
           </form>
         </div>
-        <button className="modal-close is-large" aria-label="close" onClick={this.props.onClose}></button>
       </div>
+
     );
   }
 }

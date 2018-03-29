@@ -1,5 +1,7 @@
 @import 'bulma/bulma';
 
+$peach: #FFAC98;
+$navy: #3F527D;
 
 body {
   margin: 0;
@@ -7,10 +9,20 @@ body {
   font-family: sans-serif;
 }
 
-/*.itemCard {
-  width: 400px;
-  height: 100%;
-}*/
+.menu {
+  background: $peach;
+}
+span.navbar-item {
+  color: $navy;
+  font-weight: bold;
+}
+span.navbar-item:hover {
+  color: #363636;
+  font-weight: bold;
+}
+a {
+  color: $navy;
+}
 
 .tag {
   margin-right: 2px;
@@ -22,15 +34,9 @@ body {
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 50px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
 
 .App-title {
   font-size: 1.5em;

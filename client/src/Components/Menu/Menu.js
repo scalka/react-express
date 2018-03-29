@@ -15,7 +15,6 @@ class Menu extends Component {
   }
 
   toggleModal() {
-    console.log('h');
     this.setState({
       modalOpen: !this.state.modalOpen
     })
@@ -23,27 +22,20 @@ class Menu extends Component {
 
   render() {
     return (
-
-        <div className="Menu">
-          <header className="App-header">
-            <div className="columns">
-              <div className="column">
+          <div>
+            <nav className="navbar menu" role="navigation" aria-label="main navigation">
+              <div className="navbar-brand">
                 <Link to="/"><img src={logo} className="App-logo" alt="logo" /></Link>
               </div>
-              <div className="column">
-                <Link to="/"><h1 className="App-title">Fav app</h1></Link>
+              <div className="is-active navbar-end">
+                  <span className="navbar-item "><Link to="/boardsContainer">BOARDS</Link></span>
+                  <span className="navbar-item " onClick={this.toggleModal}>ADD BOARD</span>
               </div>
-              <div className="column">
-                <ul>
-                  <li className="button is-light"><Link to="/boardsContainer">Boards</Link></li>
-                  <li className="button is-light" onClick={this.toggleModal}>Add Board</li>
-                </ul>
-              </div>
-            </div>
-          </header>
+            </nav>
+
           {/*When the App component first renders, its isOpen state is false, so the Modal is not rendered*/}
           <AddBoardModal show={this.state.modalOpen} onClose={this.toggleModal}/>
-          </div>
+        </div>
     )
   }
 }
