@@ -4,17 +4,17 @@ class AddBoardModal extends Component {
   constructor() {
     super();
     this.state = {
-
+      boardName: ''
     }
     this.addBoard = this.addBoard.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  addBoard() {
-    console.log('click');
+  addBoard(event) {
 
     fetch('/addBoardToCollection', {
       method: 'POST',
-      body: JSON.stringify({username: 'Sylwia', name: 'board name 1'}),
+      body: JSON.stringify({username: 'Sylwia', boardName: this.state.boardName}),
       headers: {
         Accept: 'application.json',
         'Content-Type': 'application/json'
@@ -27,10 +27,18 @@ class AddBoardModal extends Component {
     .catch(err => {
       console.log(err);
     });
+
   }
 
-  componentWillMount() {
+  handleChange(event) {
+    const name = event.target.name;
+    console.log(event.target.value);
+    this.setState({
+      [name]: event.target.value
+    });
+  }
 
+  handleSubmit() {
 
   }
 
@@ -44,7 +52,12 @@ class AddBoardModal extends Component {
       <div className="modal is-active">
         <div className="modal-background"></div>
         <div className="modal-content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+          <form onSubmit={this.addBoard}>
+            <label>Board name:
+              <input type='text' name="boardName" value={this.state.boardName} onChange={this.handleChange}/>
+            </label>
+            <input type="submit" value="Submit" />
+          </form>
         </div>
         <button className="modal-close is-large" aria-label="close" onClick={this.props.onClose}></button>
       </div>

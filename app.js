@@ -47,11 +47,11 @@ app.post('/addBoardToCollection', (req, res) => {
   };
   console.log(board);
   // create boards collection and saves entry if board name does not exist otherwise updates
-  db.collection('boardsCollection').update( { username: board.username }, board, { upsert:true }, (err, result) => {
+  db.collection('boardsCollection').save(board, (err, result) => {
     if (err) { return console.log(err); }
     console.log('board added to db');
     // after saving redirect user to the index page
-    res.redirect('/');
+    res.sendStatus(201);
   });
 });
 
