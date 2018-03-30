@@ -1,37 +1,39 @@
 import React, { Component } from 'react';
 
-class AddBoardModal extends Component {
+
+class AddItemModal extends Component {
   constructor() {
     super();
     this.state = {
       boardName: ''
     }
-    this.addBoard = this.addBoard.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+/*    this.addItemToBoard = this.addBoard.bind(this);
+    this.handleChange = this.handleChange.bind(this);*/
   }
 
-  addBoard(event) {
-    fetch('/addBoardToCollection', {
-      method: 'POST',
-      body: JSON.stringify({
-        username: 'Sylwia',
-        boardName: this.state.boardName,
-        items: []
-      }),
-      headers: {
-        Accept: 'application.json',
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(res => {
-      if(res.ok) return console.log('record added');
-      throw new Error('Request failed');
-    })
-    .catch(err => {
-      console.log(err);
-    });
-
-  }
+  addItemToBoard(event) {
+      fetch('/addItemToBoard', {
+        method: 'POST',
+        body: JSON.stringify({
+          boardName: 'ssda',
+          listing_id: this.props.id,
+          title: this.props.title,
+          images: this.props.images,
+          tags: this.props.tags
+        }),
+        headers: {
+          Accept: 'application.json',
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(res => {
+        if(res.ok) return console.log('record added');
+        throw new Error('Request failed');
+      })
+      .catch(err => {
+        console.log(err);
+      });
+    }
 
   handleChange(event) {
     const name = event.target.name;
@@ -42,6 +44,7 @@ class AddBoardModal extends Component {
   }
 
   render() {
+    console.log(this.props.item);
     // Render nothing if the "show" prop is false
     if(!this.props.show) {
       return null;
@@ -51,10 +54,10 @@ class AddBoardModal extends Component {
         <div className="modal-background"></div>
         <div className="modal-card">
           <header className="modal-card-head">
-            <p className="modal-card-title">Add new board</p>
+            <p className="modal-card-title">Add new item to board</p>
             <button className="delete" aria-label="close" onClick={this.props.onClose}></button>
           </header>
-          <form onSubmit={this.addBoard}>
+          <form onSubmit={this.addItemToBoard}>
           <section className="modal-card-body">
 
               <div className="field">
@@ -78,4 +81,4 @@ class AddBoardModal extends Component {
 }
 
 
-export default AddBoardModal;
+export default AddItemModal;
