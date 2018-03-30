@@ -6,46 +6,9 @@ import Tag from './Tag';
 class ItemCard extends React.Component {
   constructor(){
     super();
-    this.addItemToBoard = this.addItemToBoard.bind(this);
-  }
-
-  addItemToBoard(event) {
-    console.log(this);
-    const url = '/addItemToBoard';
-    const body = JSON.stringify({
-      boardName: 'ssda',
-      listing_id: this.props.id,
-      title: this.props.title,
-      images: this.props.images,
-      tags: this.props.tags
-    });
-
-  //  <AddBoardModal show={this.state.modalOpen} onClose={this.toggleModal}/>
-    /*fetch('/addItemToBoard', {
-      method: 'POST',
-      body: JSON.stringify({
-        boardName: 'ssda',
-        listing_id: this.props.id,
-        title: this.props.title,
-        images: this.props.images,
-        tags: this.props.tags
-      }),
-      headers: {
-        Accept: 'application.json',
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(res => {
-      if(res.ok) return console.log('record added');
-      throw new Error('Request failed');
-    })
-    .catch(err => {
-      console.log(err);
-    });*/
   }
 
   render() {
-    console.log('itemcard');
     return (
       <div className="itemCard column is-4">
         <div className="card">

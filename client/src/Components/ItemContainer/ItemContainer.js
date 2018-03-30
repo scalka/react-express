@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ItemCard from './ItemCard';
-import { fetchPosts, buildUrl, buildBasicUrl } from '../../buildUrl';
+import { fetchPosts, buildUrl } from '../../buildUrl';
 import AddItemModal from '../BoardsContainer/AddItemModal'
 
 class ItemContainer extends Component {
@@ -20,7 +20,7 @@ class ItemContainer extends Component {
      this.setState({
         modalOpen: !this.state.modalOpen,
         item: item
-     })
+     });
   }
 
   componentWillMount() {

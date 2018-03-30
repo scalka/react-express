@@ -57,31 +57,13 @@ app.post('/addBoardToCollection', (req, res) => {
 
 app.post('/addItemToBoard', (req, res) => {
   console.log(req.body);
-  const board = req.body.boardName;
-  const item = {
-    listing_id: req.body.listing_id,
-    title: req.body.title,
-    images: req.body.images,
-    tags: req.body.tags
-  };
-  console.log(item);
-/*  db.collection('boardsCollection').update( { _id: board }, {$push: { items: item }}, (err, result) => {
-console.log('user added to db');
-  if (err) { return console.log(err); }
-  // after saving redirect user to the index page
-  res.redirect('/');
-});*/
-
   db.collection('boardsCollection').findOneAndUpdate(
-    {name: board},
-    {$push: {items: item}},
+    {name: req.body.boardName},
+    {$push: {items: req.body.item}},
     (err, result) => { console.log('item added to db');
     if (err) { return console.log(err); }
   });
-
-
-
-})
+});
 
 
 // serve the game page

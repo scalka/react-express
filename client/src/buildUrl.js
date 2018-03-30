@@ -37,12 +37,28 @@ export const fetchPosts = (request) => {
   .then(data => {
     console.log(data);
     return data;
-    /*this.setState({
-      data: data.results
-    });*/
   })
   .catch(error => {
     console.log(error);
+  });
+}
+
+export const fetchFromDb = (url, body) => {
+  console.log(body);
+  return fetch(url, {
+    method: 'POST',
+    body: body,
+    headers: {
+      Accept: 'application.json',
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(res => {
+    if(res.ok) return console.log('record added');
+    throw new Error('Request failed');
+  })
+  .catch(err => {
+    console.log(err);
   });
 }
 /*

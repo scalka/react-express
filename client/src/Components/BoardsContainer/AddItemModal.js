@@ -1,39 +1,33 @@
 import React, { Component } from 'react';
-
+import { fetchFromDb } from '../../buildUrl';
 
 class AddItemModal extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       boardName: ''
     }
-/*    this.addItemToBoard = this.addBoard.bind(this);
-    this.handleChange = this.handleChange.bind(this);*/
+    this.addItemToBoard = this.addItemToBoard.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   addItemToBoard(event) {
-      fetch('/addItemToBoard', {
-        method: 'POST',
-        body: JSON.stringify({
-          boardName: 'ssda',
-          listing_id: this.props.id,
-          title: this.props.title,
-          images: this.props.images,
-          tags: this.props.tags
-        }),
-        headers: {
-          Accept: 'application.json',
-          'Content-Type': 'application/json'
-        }
-      })
-      .then(res => {
-        if(res.ok) return console.log('record added');
-        throw new Error('Request failed');
-      })
-      .catch(err => {
-        console.log(err);
-      });
-    }
+    console.log("here" + this.props.item.listing_id);
+
+    const url = '/addItemToBoard';
+    const board = 'ssda';
+    const body = JSON.stringify({
+      boardName: 'ssda',
+      item: {
+        listing_id: this.props.item.listing_id,
+        title: this.props.item.title,
+        images: this.props.item.Images,
+        tags: this.props.item.tags
+      }
+    });
+    console.log(body);
+    fetchFromDb(url, body);
+  }
 
   handleChange(event) {
     const name = event.target.name;
@@ -44,7 +38,7 @@ class AddItemModal extends Component {
   }
 
   render() {
-    console.log(this.props.item);
+
     // Render nothing if the "show" prop is false
     if(!this.props.show) {
       return null;
