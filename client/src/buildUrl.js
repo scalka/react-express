@@ -43,7 +43,7 @@ export const fetchPosts = (request) => {
   });
 }
 
-export const fetchFromDb = (url, body) => {
+export const postToDb = (url, body) => {
   console.log(body);
   return fetch(url, {
     method: 'POST',
@@ -60,6 +60,17 @@ export const fetchFromDb = (url, body) => {
   .catch(err => {
     console.log(err);
   });
+}
+
+export const fetchFromDb = (url) => {
+  return fetch(url)
+    .then(res => {
+      if(res.ok) return res.json();
+    })
+    .then(data => {
+      return data;
+    })
+    .catch(error => console.log(error));
 }
 /*
 export const fetchPosts = (filtersApplied, currentPage) => dispatch => {

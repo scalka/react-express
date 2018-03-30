@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link} from 'react-router-dom';
 import logo from '../../logo.svg';
 import ItemContainer from '../ItemContainer/ItemContainer'
-import BoardsContainer from '../BoardsContainer/BoardsContainer'
+import BoardsList from '../BoardsContainer/BoardsList'
 import AddToDbModal from '../BoardsContainer/AddToDbModal'
 
 class Menu extends Component {
@@ -28,7 +28,7 @@ class Menu extends Component {
                 <Link to="/"><img src={logo} className="App-logo" alt="logo" /></Link>
               </div>
               <div className="is-active navbar-end">
-                  <span className="navbar-item "><Link to="/boardsContainer">BOARDS</Link></span>
+                  <span className="navbar-item "><Link to="/boardsList">BOARDS</Link></span>
                   <span className="navbar-item " onClick={this.toggleModal}>ADD BOARD</span>
               </div>
             </nav>

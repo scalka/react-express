@@ -48,12 +48,17 @@ app.post('/addBoardToCollection', (req, res) => {
 });
 
 app.post('/addItemToBoard', (req, res) => {
+  console.log("here we are");
   console.log(req.body);
+
   db.collection('boardsCollection').findOneAndUpdate(
-    {name: req.body.boardName},
+    {boardName: req.body.boardName},
     {$push: {items: req.body.item}},
-    (err, result) => { console.log('item added to db');
-    if (err) { return console.log(err); }
+    (err, result) => {
+      console.log('item added to db');
+      console.log(req.body.boardName);
+      if (err) { return console.log(err);
+    }
   });
 });
 

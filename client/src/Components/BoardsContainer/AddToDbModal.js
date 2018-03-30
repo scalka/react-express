@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { fetchFromDb } from '../../buildUrl';
+import { postToDb } from '../../buildUrl';
 import { ModalHeader, ModalBody } from './ModalElements';
 
 class AddToDbModal extends Component {
@@ -13,14 +13,16 @@ class AddToDbModal extends Component {
   }
 
   addBoard(e, url) {
-    console.log("url --- " + url);
+    console.log("outside --- " + this.state.boardName);
     let body;
     if(url==='/addBoardToCollection') {
+      console.log("addBoardToCollection --- " + this.state.boardName);
       body = JSON.stringify({
         boardName: this.state.boardName,
         items: []
       });
     } else if (url ==='/addItemToBoard') {
+      console.log("addItemToBoard --- " + this.state.boardName);
       body = JSON.stringify({
         boardName: this.state.boardName,
         item: {
@@ -31,18 +33,20 @@ class AddToDbModal extends Component {
         }
       });
     }
-    fetchFromDb(url, body);
+    postToDb(url, body);
   }
 
   handleChange(event) {
     const name = event.target.name;
     console.log(event.target.value);
+    console.log(name);
     this.setState({
       [name]: event.target.value
     });
   }
 
   render() {
+    console.log(this.state.boardName);
     // Render nothing if the "show" prop is false
     if(!this.props.show) {
       return null;
@@ -56,14 +60,6 @@ class AddToDbModal extends Component {
             <button className="delete" aria-label="close" onClick={this.props.onClose}></button>
           </header>
           <form onSubmit={ e => this.addBoard(e, this.props.url) }>
-          <section className="modal-card-body">
-              <div className="field">
-                <label className="label">Board name:</label>
-                <div className="control">
-                  <input className="input" type='text' name="boardName" value={this.state.boardName} onChange={this.handleChange}/>
-                </div>
-              </div>
-          </section>
           <ModalBody url={this.props.url} value={this.state.boardName} handleChange={this.handleChange}/>
           <footer className="modal-card-foot">
             <input className="button is-success" type="submit" value="Submit" />
