@@ -38,12 +38,12 @@ app.get('/boardsCollection', (req, res) => {
 });
 
 app.post('/addBoardToCollection', (req, res) => {
-
   // assign request body values to the player
   const board = {
     username: req.body.nickname,
     name: req.body.boardName,
-    date: new Date()
+    date: new Date(),
+    items: []
   };
   console.log(board);
   // create boards collection and saves entry if board name does not exist otherwise updates
@@ -54,6 +54,34 @@ app.post('/addBoardToCollection', (req, res) => {
     res.sendStatus(201);
   });
 });
+
+app.post('/addItemToBoard', (req, res) => {
+  console.log(req.body);
+  const board = req.body.boardName;
+  const item = {
+    listing_id: req.body.listing_id,
+    title: req.body.title,
+    images: req.body.images,
+    tags: req.body.tags
+  };
+  console.log(item);
+/*  db.collection('boardsCollection').update( { _id: board }, {$push: { items: item }}, (err, result) => {
+console.log('user added to db');
+  if (err) { return console.log(err); }
+  // after saving redirect user to the index page
+  res.redirect('/');
+});*/
+
+  db.collection('boardsCollection').findOneAndUpdate(
+    {name: board},
+    {$push: {items: item}},
+    (err, result) => { console.log('item added to db');
+    if (err) { return console.log(err); }
+  });
+
+
+
+})
 
 
 // serve the game page

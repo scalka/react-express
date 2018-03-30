@@ -11,10 +11,9 @@ class AddBoardModal extends Component {
   }
 
   addBoard(event) {
-
-    fetch('/addBoardToCollection', {
+    fetch('/addItemToBoard', {
       method: 'POST',
-      body: JSON.stringify({username: 'Sylwia', boardName: this.state.boardName}),
+      body: JSON.stringify({boardName: 'ssda', listing_id: '123', title: 'some title', images: ['a','b'], tags: ['a','b']}),
       headers: {
         Accept: 'application.json',
         'Content-Type': 'application/json'
@@ -28,6 +27,23 @@ class AddBoardModal extends Component {
       console.log(err);
     });
 
+/*
+    fetch('/addBoardToCollection', {
+      method: 'POST',
+      body: JSON.stringify({username: 'Sylwia', boardName: this.state.boardName, items: []}),
+      headers: {
+        Accept: 'application.json',
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(res => {
+      if(res.ok) return console.log('record added');
+      throw new Error('Request failed');
+    })
+    .catch(err => {
+      console.log(err);
+    });
+*/
   }
 
   handleChange(event) {
