@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ItemCard from './ItemCard';
 import { fetchPosts, buildUrl } from '../../buildUrl';
-import AddItemModal from '../BoardsContainer/AddItemModal'
+import AddToDbModal from '../BoardsContainer/AddToDbModal'
 
 class ItemContainer extends Component {
   constructor(props) {
@@ -24,23 +24,19 @@ class ItemContainer extends Component {
   }
 
   componentWillMount() {
-
     const request = buildUrl();
-    // fetchPosts returns promise
-    const listings = fetchPosts(request).then( response => {
+    // fetchPosts from etsy returns promise
+    fetchPosts(request).then( response => {
       this.setState({
         data: response.results
       });
     });
-
-  }
-
-  componentDidMount() {
-    //console.log(this.state.data);
   }
 
   render() {
+    //create Item card for each item
     let itemsList = this.state.data.map(item => {
+      //add button as a prop to be able to open modal and pass item to modal
       let saveButton = <a className="button" onClick={() => this.openModalWithItem(item)}>
                         <span className="icon is-small">
                           <i className="fas fa-heart"></i>
@@ -59,8 +55,8 @@ class ItemContainer extends Component {
 */
     return (
       <section className="section">
-        <AddItemModal show={this.state.modalOpen}
-               item={this.state.item} onClose={this.openModalWithItem}/>
+        <AddToDbModal show={this.state.modalOpen}
+               item={this.state.item} onClose={this.openModalWithItem} url='/addItemToBoard'/>
 
         <div className="columns is-multiline">
           {itemsList}

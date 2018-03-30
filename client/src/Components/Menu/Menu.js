@@ -3,7 +3,7 @@ import { Link} from 'react-router-dom';
 import logo from '../../logo.svg';
 import ItemContainer from '../ItemContainer/ItemContainer'
 import BoardsContainer from '../BoardsContainer/BoardsContainer'
-import AddBoardModal from '../BoardsContainer/AddBoardModal'
+import AddToDbModal from '../BoardsContainer/AddToDbModal'
 
 class Menu extends Component {
   constructor(){
@@ -13,7 +13,7 @@ class Menu extends Component {
     }
     this.toggleModal = this.toggleModal.bind(this);
   }
-
+  // open or close modal
   toggleModal() {
     this.setState({
       modalOpen: !this.state.modalOpen
@@ -34,7 +34,7 @@ class Menu extends Component {
             </nav>
 
           {/*When the App component first renders, its isOpen state is false, so the Modal is not rendered*/}
-          <AddBoardModal show={this.state.modalOpen} onClose={this.toggleModal}/>
+          <AddToDbModal show={this.state.modalOpen} onClose={this.toggleModal} url='/addBoardToCollection'/>
         </div>
     )
   }

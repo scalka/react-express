@@ -15,7 +15,6 @@ class ItemCard extends React.Component {
           <div className="card-image">
             <figure className="image is-4by3">
               <img src={ this.props.images[0] ? this.props.images[0].url_170x135 : 'http://via.placeholder.com/400x400'  } alt={this.props.title}/>
-
             </figure>
           </div>
           <div className="card-content">

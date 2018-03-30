@@ -24,10 +24,9 @@ class BoardsContainer extends Component {
   }
 
   render() {
-    console.log('aaa');
     let boards = this.state.boards.map(board => {
       console.log(board);
-      return(<h1 key={board.name}>{board.name}</h1>);
+      return(<h1 key={board.boardName}>{board.boardName}</h1>);
     });
     return (
       <section className="section">

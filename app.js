@@ -38,16 +38,8 @@ app.get('/boardsCollection', (req, res) => {
 });
 
 app.post('/addBoardToCollection', (req, res) => {
-  // assign request body values to the player
-  const board = {
-    username: req.body.nickname,
-    name: req.body.boardName,
-    date: new Date(),
-    items: []
-  };
-  console.log(board);
   // create boards collection and saves entry if board name does not exist otherwise updates
-  db.collection('boardsCollection').save(board, (err, result) => {
+  db.collection('boardsCollection').save(req.body, (err, result) => {
     if (err) { return console.log(err); }
     console.log('board added to db');
     // after saving redirect user to the index page

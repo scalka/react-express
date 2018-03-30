@@ -4,9 +4,7 @@ import { fetchFromDb } from '../../buildUrl';
 class AddItemModal extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      boardName: ''
-    }
+
     this.addItemToBoard = this.addItemToBoard.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }

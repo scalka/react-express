@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { fetchFromDb } from '../../buildUrl';
+import { ModalHeader, ModalBody } from './ModalElements';
 
-class AddBoardModal extends Component {
-  constructor() {
-    super();
+class AddToDbModal extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
       boardName: ''
     }
@@ -10,27 +12,26 @@ class AddBoardModal extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  addBoard(event) {
-    fetch('/addBoardToCollection', {
-      method: 'POST',
-      body: JSON.stringify({
-        username: 'Sylwia',
+  addBoard(e, url) {
+    console.log("url --- " + url);
+    let body;
+    if(url==='/addBoardToCollection') {
+      body = JSON.stringify({
         boardName: this.state.boardName,
         items: []
-      }),
-      headers: {
-        Accept: 'application.json',
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(res => {
-      if(res.ok) return console.log('record added');
-      throw new Error('Request failed');
-    })
-    .catch(err => {
-      console.log(err);
-    });
-
+      });
+    } else if (url ==='/addItemToBoard') {
+      body = JSON.stringify({
+        boardName: this.state.boardName,
+        item: {
+          listing_id: this.props.item.listing_id,
+          title: this.props.item.title,
+          images: this.props.item.Images,
+          tags: this.props.item.tags
+        }
+      });
+    }
+    fetchFromDb(url, body);
   }
 
   handleChange(event) {
@@ -51,20 +52,19 @@ class AddBoardModal extends Component {
         <div className="modal-background"></div>
         <div className="modal-card">
           <header className="modal-card-head">
-            <p className="modal-card-title">Add new board</p>
+            <ModalHeader url={this.props.url}/>
             <button className="delete" aria-label="close" onClick={this.props.onClose}></button>
           </header>
-          <form onSubmit={this.addBoard}>
+          <form onSubmit={ e => this.addBoard(e, this.props.url) }>
           <section className="modal-card-body">
-
               <div className="field">
                 <label className="label">Board name:</label>
                 <div className="control">
                   <input className="input" type='text' name="boardName" value={this.state.boardName} onChange={this.handleChange}/>
                 </div>
               </div>
-
           </section>
+          <ModalBody url={this.props.url} value={this.state.boardName} handleChange={this.handleChange}/>
           <footer className="modal-card-foot">
             <input className="button is-success" type="submit" value="Submit" />
             <button className="button">Cancel</button>
@@ -78,4 +78,4 @@ class AddBoardModal extends Component {
 }
 
 
-export default AddBoardModal;
+export default AddToDbModal;
