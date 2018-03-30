@@ -18,19 +18,12 @@ class BoardsList extends Component {
 
   render() {
     let boards = this.state.boards.map(board => {
-      /*console.log(board);*/
-      return(
-/*        <li>
-          <a key={board.boardName}>{board.boardName}</a>
-        </li>*/
-        <option key={board.boardName} value={board.boardName}>{board.boardName}</option>
-      );
+      return(<option key={board.boardName} value={board.boardName}>{board.boardName}</option>);
     });
-    console.log(boards);
+
     return (
       <section className="section">
         <h1 className="has-text-primary is-size-4">Boards</h1>
-        <ul>{boards}</ul>
         <select value={this.props.selected} name={this.props.name} onChange={this.props.handleChange}>
           {boards}
         </select>
