@@ -3,6 +3,36 @@ import PropTypes from 'prop-types';
 import Tag from './Tag';
 
 class ItemCard extends React.Component {
+  constructor(){
+    super();
+    this.addItemToBoard = this.addItemToBoard.bind(this);
+  }
+
+  addItemToBoard(event) {
+    console.log(this);
+    fetch('/addItemToBoard', {
+      method: 'POST',
+      body: JSON.stringify({
+        boardName: 'ssda',
+        listing_id: this.props.id,
+        title: this.props.title,
+        images: this.props.images,
+        tags: this.props.tags
+      }),
+      headers: {
+        Accept: 'application.json',
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(res => {
+      if(res.ok) return console.log('record added');
+      throw new Error('Request failed');
+    })
+    .catch(err => {
+      console.log(err);
+    });
+  }
+
   render() {
     console.log('itemcard');
     return (
@@ -10,7 +40,8 @@ class ItemCard extends React.Component {
         <div className="card">
           <div className="card-image">
             <figure className="image is-4by3">
-              <img src={this.props.image} alt={this.props.title}/>
+              <img src={ this.props.images[0].url_170x135 || 'http://via.placeholder.com/170x135' } alt={this.props.title}/>
+
             </figure>
           </div>
           <div className="card-content">
@@ -22,7 +53,7 @@ class ItemCard extends React.Component {
           </div>
           <footer className="card-footer">
             <p className="card-footer-item">
-              <a className="button">
+              <a className="button" onClick={this.addItemToBoard}>
                 <span className="icon is-small">
                   <i className="fas fa-heart"></i>
                 </span>
@@ -45,7 +76,7 @@ ItemCard.defaultProps = {
 // Checks that the correct type of props are supplied:
 ItemCard.propTypes = {
   title: PropTypes.string,
-  image: PropTypes.string
+  image: PropTypes.array
 };
 
 export default ItemCard;

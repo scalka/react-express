@@ -33,7 +33,7 @@ class ItemContainer extends Component {
   render() {
     let itemsList = this.state.data.map(item => {
       return (
-        <ItemCard key={item.listing_id} title={item.title} tags={item.taxonomy_path} price={item.price} image={ (item.Images[0].url_170x135) ? item.Images[0].url_170x135 :  'http://via.placeholder.com/350x150' }/>
+        <ItemCard key={item.listing_id} id={item.listing_id} title={item.title} tags={item.taxonomy_path} price={item.price} images={item.Images}/>
       );
     });
 
