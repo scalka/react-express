@@ -7,22 +7,22 @@ class AddToDbModal extends Component {
     super(props);
     this.state = {
       boardName: ''
-    }
+    };
     this.addBoard = this.addBoard.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
   addBoard(e, url) {
-    console.log("outside --- " + this.state.boardName);
+    // console.log("outside --- " + this.state.boardName);
     let body;
-    if(url==='/addBoardToCollection') {
-      console.log("addBoardToCollection --- " + this.state.boardName);
+    if(url === '/addBoardToCollection') {
+      //console.log("addBoardToCollection --- " + this.state.boardName);
       body = JSON.stringify({
         boardName: this.state.boardName,
         items: []
       });
-    } else if (url ==='/addItemToBoard') {
-      console.log("addItemToBoard --- " + this.state.boardName);
+    } else if (url === '/addItemToBoard') {
+    //  console.log("addItemToBoard --- " + this.state.boardName);
       body = JSON.stringify({
         boardName: this.state.boardName,
         item: {
@@ -60,11 +60,11 @@ class AddToDbModal extends Component {
             <button className="delete" aria-label="close" onClick={this.props.onClose}></button>
           </header>
           <form onSubmit={ e => this.addBoard(e, this.props.url) }>
-          <ModalBody url={this.props.url} value={this.state.boardName} handleChange={this.handleChange}/>
-          <footer className="modal-card-foot">
-            <input className="button is-success" type="submit" value="Submit" />
-            <button className="button">Cancel</button>
-          </footer>
+            <ModalBody url={this.props.url} value={this.state.boardName} handleChange={this.handleChange}/>
+            <footer className="modal-card-foot">
+              <input className="button is-success" type="submit" value="Submit" />
+              <button className="button">Cancel</button>
+            </footer>
           </form>
         </div>
       </div>

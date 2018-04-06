@@ -6,7 +6,7 @@ class BoardsList extends Component {
     super();
     this.state = {
       boards: []
-    }
+    };
   }
   componentWillMount() {
     fetchFromDb('/boardsCollection').then( response => {

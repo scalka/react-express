@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Menu from './Components/Menu/Menu'
-import ItemContainer from './Components/ItemContainer/ItemContainer'
-import BoardsList from './Components/BoardsContainer/BoardsList'
+import Menu from './Components/Menu/Menu';
+import ItemContainer from './Components/ItemContainer/ItemContainer';
+import BoardsAndItems from './Components/BoardsContainer/BoardsAndItems';
+import ItemDetail from './Components/ItemContainer/ItemDetail';
 
 import {BrowserRouter, Route} from 'react-router-dom';
 
@@ -11,9 +12,10 @@ class App extends Component {
 
       <BrowserRouter>
         <div className="App">
-        <Menu/>
-        <Route exact path='/' component={ItemContainer}/>
-        <Route path='/boardsList' component={BoardsList}/>
+          <Menu/>
+          <Route exact path='/' component={ItemContainer}/>
+          <Route path='/boardsAndItems' component={BoardsAndItems}/>
+          <Route path='/itemDetail/:item_id' component={ItemDetail} />
 
         </div>
       </BrowserRouter>

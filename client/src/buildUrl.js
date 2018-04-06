@@ -10,7 +10,7 @@ export const buildUrl = (filtersApplied) => {
     if(`${filtersApplied[param]}` && param !== 'jobs') {
       console.log(param);
       console.log(`${filtersApplied[param]}`);
-      parameters[param] = `${filtersApplied[param]}`
+      parameters[param] = `${filtersApplied[param]}`;
     }
   }
   let params = querystring.stringify(parameters);
@@ -18,7 +18,7 @@ export const buildUrl = (filtersApplied) => {
   let request = `https://api.etsy.com/v2/listings/active.js?api_key=${etsyKey}&&includes=Images`;
   //console.log(`https://api-v2.themuse.com/jobs?api_key=${request}&${etsyKey}`);
   return request;
-}
+};
 
 export const buildBasicUrl = (route) => {
   let etsyKey = config.etsyKey;
@@ -26,22 +26,22 @@ export const buildBasicUrl = (route) => {
   let basicUrl = `https://api.etsy.com/v2/${route}?api_key=${etsyKey}`;
   console.log(basicUrl);
   return basicUrl;
-}
+};
 
 export const fetchPosts = (request) => {
   return fetchJsonp(request, {timeout: 10000})
-  .then(response => {
-    if(response.ok) return response.json();
-    throw new Error('Request failed.');
-  })
-  .then(data => {
-    console.log(data);
-    return data;
-  })
-  .catch(error => {
-    console.log(error);
-  });
-}
+    .then(response => {
+      if(response.ok) return response.json();
+      throw new Error('Request failed.');
+    })
+    .then(data => {
+      console.log(data);
+      return data;
+    })
+    .catch(error => {
+      console.log(error);
+    });
+};
 
 export const postToDb = (url, body) => {
   console.log(body);
@@ -53,14 +53,14 @@ export const postToDb = (url, body) => {
       'Content-Type': 'application/json'
     }
   })
-  .then(res => {
-    if(res.ok) return console.log('record added');
-    throw new Error('Request failed');
-  })
-  .catch(err => {
-    console.log(err);
-  });
-}
+    .then(res => {
+      if(res.ok) return console.log('record added');
+      throw new Error('Request failed');
+    })
+    .catch(err => {
+      console.log(err);
+    });
+};
 
 export const fetchFromDb = (url) => {
   return fetch(url)
@@ -71,7 +71,7 @@ export const fetchFromDb = (url) => {
       return data;
     })
     .catch(error => console.log(error));
-}
+};
 /*
 export const fetchPosts = (filtersApplied, currentPage) => dispatch => {
   const requestedAt = Date.now()

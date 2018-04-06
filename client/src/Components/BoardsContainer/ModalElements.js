@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import BoardsList from './BoardsList'
+import BoardsList from './BoardsList';
 
 export const ModalHeader = (props) => {
   let header;
-  if(props.url==='/addBoardToCollection') {
+  if(props.url === '/addBoardToCollection') {
     header = 'Add new board to collection';
-  } else if (props.url ==='/addItemToBoard') {
+  } else if (props.url === '/addItemToBoard') {
     header = 'Add item to board';
   }
-   return (<p className="modal-card-title">{ header }</p>)
- }
+  return (<p className="modal-card-title">{ header }</p>);
+};
 
 
 export class ModalBody extends Component {
   constructor(props) {
-      super(props);
-      this.state = {
-        boardName: ''
-      };
+    super(props);
+    this.state = {
+      boardName: ''
+    };
 
-      this.handleChange = this.handleChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event) {
@@ -35,7 +35,7 @@ export class ModalBody extends Component {
   }
 
   render() {
-    if(this.props.url ==='/addBoardToCollection') {
+    if(this.props.url === '/addBoardToCollection') {
       return (
         <section className="modal-card-body">
           <div className="field">
@@ -45,10 +45,10 @@ export class ModalBody extends Component {
             </div>
           </div>
         </section>
-      )
-    } else if (this.props.url ==='/addItemToBoard') {
+      );
+    } else if (this.props.url === '/addItemToBoard') {
       return (
-          <section className="modal-card-body">
+        <section className="modal-card-body">
           <div className="field">
             <label className="label">Select board to add item:</label>
             <BoardsList name="boardName" value={this.state.boardName} handleChange={this.props.handleChange}/>
@@ -57,7 +57,7 @@ export class ModalBody extends Component {
             </div>
           </div>
         </section>
-      )
+      );
     }
   }
 }

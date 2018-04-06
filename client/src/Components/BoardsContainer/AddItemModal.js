@@ -10,7 +10,7 @@ class AddItemModal extends Component {
   }
 
   addItemToBoard(event) {
-    console.log("here" + this.props.item.listing_id);
+    console.log('here' + this.props.item.listing_id);
 
     const url = '/addItemToBoard';
     const board = 'ssda';
@@ -50,7 +50,7 @@ class AddItemModal extends Component {
             <button className="delete" aria-label="close" onClick={this.props.onClose}></button>
           </header>
           <form onSubmit={this.addItemToBoard}>
-          <section className="modal-card-body">
+            <section className="modal-card-body">
 
               <div className="field">
                 <label className="label">Board name:</label>
@@ -59,11 +59,11 @@ class AddItemModal extends Component {
                 </div>
               </div>
 
-          </section>
-          <footer className="modal-card-foot">
-            <input className="button is-success" type="submit" value="Submit" />
-            <button className="button">Cancel</button>
-          </footer>
+            </section>
+            <footer className="modal-card-foot">
+              <input className="button is-success" type="submit" value="Submit" />
+              <button className="button">Cancel</button>
+            </footer>
           </form>
         </div>
       </div>
