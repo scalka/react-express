@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Tag from './Tag';
 import { Link} from 'react-router-dom';
+import SaveButton from './SaveButton';
 
 class ItemCard extends React.Component {
   render() {
@@ -26,9 +27,9 @@ class ItemCard extends React.Component {
             </div>
           </div>
           <footer className="card-footer">
-            <p className="card-footer-item">
-              {this.props.button}
-            </p>
+            <div className="card-footer-item">
+              <SaveButton item={this.props.data}/>
+            </div>
           </footer>
         </div>
       </div>

@@ -37,15 +37,11 @@ class ItemContainer extends Component {
     //create Item card for each item
     let itemsList = this.state.data.map(item => {
       //add button as a prop to be able to open modal and pass item to modal
-      let saveButton = <a className="button" onClick={() => this.openModalWithItem(item)}>
-        <span className="icon is-small">
-          <i className="fas fa-heart"></i>
-        </span>
-      </a>;
+
 
       return (
         <ItemCard key={item.listing_id} id={item.listing_id} data={item} title={item.title} tags={item.taxonomy_path} price={item.price} images={item.Images}
-          button={saveButton} modal={item}/>
+        />
       );
     });
 
@@ -56,7 +52,6 @@ class ItemContainer extends Component {
     */
     return (
       <section className="section">
-        <AddToDbModal show={this.state.modalOpen} item={this.state.item} onClose={this.openModalWithItem} url='/addItemToBoard'/>
         <div className="columns is-multiline">
           {itemsList}
         </div>

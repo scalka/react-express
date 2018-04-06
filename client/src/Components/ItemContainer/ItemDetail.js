@@ -1,4 +1,5 @@
 import React from 'react';
+import SaveButton from './SaveButton';
 
 class ItemDetail extends React.Component {
   constructor() {
@@ -21,16 +22,23 @@ class ItemDetail extends React.Component {
     }
   }
 
+  updateState() {
+    this.setState({
+      data: this.props.history.state
+    });
+  }
   render() {
-    const materials = this.state.data.materials.map( material => {
+/*    const materials = this.state.data.materials.map( material => {
       return <span key={material}>{material} </span>;
     });
     const categories = this.state.data.category_path.map( cat => {
       return <span key={cat}>{cat}</span>;
-    });
-
+    });*/
+    console.log(this);
     return (
       <div className="section">
+        <SaveButton item={this.state.data}/>
+        {/*
         <div className="container">
           <div className="columns">
             <div className="column">
@@ -69,22 +77,16 @@ class ItemDetail extends React.Component {
                   </div>
                 </div>
                 <footer className="card-footer">
-
+                  <SaveButton item={this.state.data}/>
                 </footer>
               </div>
             </div>
           </div>
         </div>
+        */}
       </div>
     );
   }
 }
 
 export default ItemDetail;
-
-/*export const ItemDetail = ({ match }) => {
-  return (<div>
-    {match.params.item_id}
-  </div>);
-};
-*/

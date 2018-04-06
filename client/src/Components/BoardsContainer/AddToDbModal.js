@@ -33,7 +33,9 @@ class AddToDbModal extends Component {
         }
       });
     }
-    postToDb(url, body);
+    let add = postToDb(url, body);
+
+    console.log(add);
   }
 
   handleChange(event) {
