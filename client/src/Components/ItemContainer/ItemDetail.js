@@ -3,7 +3,6 @@ import React from 'react';
 class ItemDetail extends React.Component {
   constructor() {
     super();
-
     this.state = {
       data: []
     };
@@ -20,13 +19,29 @@ class ItemDetail extends React.Component {
         data: this.props.history.state
       });
     }
-
   }
 
   render() {
-
     console.log(this.state.data);
-    return ( <h1>hi</h1>);
+    return (
+      <div className="section">
+        <div className="container">
+          <div className="columns">
+            <div className="column">
+              <div class="box">
+                <img src={this.state.data.Images[0].url_570xN}/>
+              </div>
+            </div>
+            <div className="column">
+              <div class="box">
+                <h1>{this.state.data.title}</h1>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
