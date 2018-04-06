@@ -3,7 +3,6 @@ import ItemCard from './ItemCard';
 import { fetchPosts, buildUrl } from '../../buildUrl';
 import AddToDbModal from '../BoardsContainer/AddToDbModal';
 
-
 class ItemContainer extends Component {
   constructor(props) {
     super(props);
@@ -43,9 +42,10 @@ class ItemContainer extends Component {
           <i className="fas fa-heart"></i>
         </span>
       </a>;
+
       return (
         <ItemCard key={item.listing_id} id={item.listing_id} data={item} title={item.title} tags={item.taxonomy_path} price={item.price} images={item.Images}
-          button={saveButton}/>
+          button={saveButton} modal={item}/>
       );
     });
 

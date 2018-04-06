@@ -11,7 +11,6 @@ export const ModalHeader = (props) => {
   return (<p className="modal-card-title">{ header }</p>);
 };
 
-
 export class ModalBody extends Component {
   constructor(props) {
     super(props);

@@ -6539,6 +6539,22 @@ a {
 .App-intro {
   font-size: large; }
 
+.item-details {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0; }
+
+.item-details-li {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125); }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg); }

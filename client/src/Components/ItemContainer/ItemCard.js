@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Tag from './Tag';
 import { Link} from 'react-router-dom';
 
-
 class ItemCard extends React.Component {
   render() {
     return (
