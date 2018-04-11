@@ -34,21 +34,20 @@ class AddToDbModal extends Component {
       });
     }
     let add = postToDb(url, body);
-
+    e.preventDefault();
     console.log(add);
   }
 
   handleChange(event) {
     const name = event.target.name;
-    console.log(event.target.value);
-    console.log(name);
+    //console.log(event.target.value);
+    //console.log(name);
     this.setState({
       [name]: event.target.value
     });
   }
 
   render() {
-    console.log(this.state.boardName);
     // Render nothing if the "show" prop is false
     if(!this.props.show) {
       return null;
@@ -61,7 +60,7 @@ class AddToDbModal extends Component {
             <ModalHeader url={this.props.url}/>
             <button className="delete" aria-label="close" onClick={this.props.onClose}></button>
           </header>
-          <form onSubmit={ e => this.addBoard(e, this.props.url) }>
+          <form onSubmit={ e => this.addBoard(e, this.props.url) } >
             <ModalBody url={this.props.url} value={this.state.boardName} handleChange={this.handleChange}/>
             <footer className="modal-card-foot">
               <input className="button is-success" type="submit" value="Submit" />

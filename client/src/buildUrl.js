@@ -35,7 +35,6 @@ export const fetchPosts = (request) => {
       throw new Error('Request failed.');
     })
     .then(data => {
-      console.log(data);
       return data;
     })
     .catch(error => {
@@ -54,7 +53,12 @@ export const postToDb = (url, body) => {
     }
   })
     .then(res => {
-      if(res.ok) return console.log('record added');
+      console.log("response" + res);
+      if(res.ok) {
+
+
+        return console.log('record added');
+      }
       throw new Error('Request failed');
     })
     .catch(err => {

@@ -1,5 +1,6 @@
 import React from 'react';
 import SaveButton from './SaveButton';
+import {Route} from 'react-router-dom';
 
 class ItemDetail extends React.Component {
   constructor() {
@@ -10,7 +11,7 @@ class ItemDetail extends React.Component {
   }
 
   componentWillMount() {
-    console.log(this.props);
+    // console.log(this.props);
     if(this.props.location.state) {
       this.setState({
         data: this.props.location.state
@@ -27,6 +28,8 @@ class ItemDetail extends React.Component {
       data: this.props.history.state
     });
   }
+
+
   render() {
 /*    const materials = this.state.data.materials.map( material => {
       return <span key={material}>{material} </span>;
@@ -37,6 +40,7 @@ class ItemDetail extends React.Component {
     console.log(this);
     return (
       <div className="section">
+
         <SaveButton item={this.state.data}/>
         {/*
         <div className="container">
