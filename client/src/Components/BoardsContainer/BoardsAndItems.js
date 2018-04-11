@@ -20,6 +20,8 @@ class BoardsAndItems extends Component {
     });
   }
 
+
+
   // open or close modal
   toggleModal() {
     this.setState({
