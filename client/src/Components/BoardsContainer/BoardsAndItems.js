@@ -11,6 +11,7 @@ class BoardsAndItems extends Component {
     };
     this.toggleModal = this.toggleModal.bind(this);
   }
+
   componentWillMount() {
     fetchFromDb('/boardsCollection').then( response => {
       this.setState({
@@ -24,6 +25,14 @@ class BoardsAndItems extends Component {
     this.setState({
       modalOpen: !this.state.modalOpen
     });
+    // fetch all boards to include the added one
+    if(!this.modalOpen) {
+      fetchFromDb('/boardsCollection').then( response => {
+        this.setState({
+          boards: response
+        });
+      });
+    }
   }
 
   render() {
@@ -56,7 +65,7 @@ class BoardsAndItems extends Component {
       <section className="section">
         <h1 className="has-text-primary title">BOARDS</h1>
         <button className="navbar-item " onClick={this.toggleModal}>ADD BOARD</button>
-        
+
         <div className="container is-fluid">
           <div className="columns is-multiline is-4">
             {boards}

@@ -58,7 +58,8 @@ class AddToDbModal extends Component {
         <div className="modal-card">
           <header className="modal-card-head">
             <ModalHeader url={this.props.url}/>
-            <button className="delete" aria-label="close" onClick={this.props.onClose} ref={ btn => this.closeButton = btn }></button>
+            <button className="delete" aria-label="close" onClick={this.props.onClose}
+              ref={ btn => this.closeButton = btn }></button>
           </header>
           <form onSubmit={ e => this.handleSubmitToDbToCollection(e, this.props.url) } >
             <ModalBody url={this.props.url} value={this.state.boardName} handleChange={this.handleChange}/>
