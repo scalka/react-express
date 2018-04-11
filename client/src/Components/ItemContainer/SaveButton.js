@@ -8,7 +8,7 @@ class SaveButton extends Component {
     super(props);
     this.state = {
       modalOpen: false
-    }
+    };
     this.openModalWithItem = this.openModalWithItem.bind(this);
   }
 

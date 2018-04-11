@@ -8,11 +8,11 @@ class AddToDbModal extends Component {
     this.state = {
       boardName: ''
     };
-    this.addBoard = this.addBoard.bind(this);
+    this.handleSubmitToDbToCollection = this.handleSubmitToDbToCollection.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
-  addBoard(e, url) {
+  handleSubmitToDbToCollection(e, url) {
     // console.log("outside --- " + this.state.boardName);
     let body;
     if(url === '/addBoardToCollection') {
@@ -35,7 +35,7 @@ class AddToDbModal extends Component {
     }
     let add = postToDb(url, body);
     e.preventDefault();
-    console.log(add);
+    this.closeButton.click();
   }
 
   handleChange(event) {
@@ -58,9 +58,9 @@ class AddToDbModal extends Component {
         <div className="modal-card">
           <header className="modal-card-head">
             <ModalHeader url={this.props.url}/>
-            <button className="delete" aria-label="close" onClick={this.props.onClose}></button>
+            <button className="delete" aria-label="close" onClick={this.props.onClose} ref={ btn => this.closeButton = btn }></button>
           </header>
-          <form onSubmit={ e => this.addBoard(e, this.props.url) } >
+          <form onSubmit={ e => this.handleSubmitToDbToCollection(e, this.props.url) } >
             <ModalBody url={this.props.url} value={this.state.boardName} handleChange={this.handleChange}/>
             <footer className="modal-card-foot">
               <input className="button is-success" type="submit" value="Submit" />

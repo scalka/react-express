@@ -31,18 +31,15 @@ class ItemDetail extends React.Component {
 
 
   render() {
-/*    const materials = this.state.data.materials.map( material => {
+    const materials = this.state.data.materials.map( material => {
       return <span key={material}>{material} </span>;
     });
     const categories = this.state.data.category_path.map( cat => {
       return <span key={cat}>{cat}</span>;
-    });*/
-    console.log(this);
+    });
+
     return (
       <div className="section">
-
-        <SaveButton item={this.state.data}/>
-        {/*
         <div className="container">
           <div className="columns">
             <div className="column">
@@ -54,6 +51,7 @@ class ItemDetail extends React.Component {
               <div className="card">
                 <header className="card-header">
                   <p className="card-header-title">{this.state.data.title}</p>
+                  <SaveButton item={this.state.data}/>
                 </header>
                 <div className="card-content">
                   <div className="columns has-text-left">
@@ -81,13 +79,11 @@ class ItemDetail extends React.Component {
                   </div>
                 </div>
                 <footer className="card-footer">
-                  <SaveButton item={this.state.data}/>
                 </footer>
               </div>
             </div>
           </div>
         </div>
-        */}
       </div>
     );
   }

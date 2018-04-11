@@ -60,37 +60,3 @@ app.post('/addItemToBoard', (req, res) => {
       }
     });
 });
-
-
-// serve the game page
-app.get('/game', (req, res) => {
-  res.sendFile(__dirname + '/public/game.html');
-});
-
-// add a document to the DB collection recording the player event
-app.post('/leaderboardUpdate', (req, res) => {
-  // assign request body values to the player
-  const player = {
-    username: req.body.nickname,
-    score: req.body.score,
-    time: new Date()
-  };
-  // create players collection and saves entry if user name does not exist otherwise updates
-  db.collection('players').update( { username: player.username }, player, { upsert:true }, (err, result) => {
-    if (err) { return console.log(err); }
-    console.log('user added to db');
-    // after saving redirect user to the index page
-    res.redirect('/');
-  });
-});
-
-// get the player data from the database
-app.get('/players', (req, res) => {
-  // find entries in the database, sort it on score and limit to first six
-  // find returns cursor so we need to use toArray method
-  db.collection('players').find().sort({'score': -1}).limit(6).toArray((err, result) => {
-    if (err) return console.log(err);
-    // send result to the client
-    res.send(result);
-  });
-});
