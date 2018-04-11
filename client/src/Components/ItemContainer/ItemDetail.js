@@ -1,6 +1,6 @@
 import React from 'react';
 import SaveButton from './SaveButton';
-import {Route} from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 class ItemDetail extends React.Component {
   constructor() {

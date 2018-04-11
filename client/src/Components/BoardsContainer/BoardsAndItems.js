@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
 import { fetchFromDb } from '../../buildUrl';
+import AddToDbModal from './AddToDbModal';
 
 class BoardsAndItems extends Component {
   constructor() {
     super();
     this.state = {
-      boards: []
+      boards: [],
+      modalOpen: false
     };
+    this.toggleModal = this.toggleModal.bind(this);
   }
   componentWillMount() {
     fetchFromDb('/boardsCollection').then( response => {
       this.setState({
         boards: response
       });
+    });
+  }
+
+  // open or close modal
+  toggleModal() {
+    this.setState({
+      modalOpen: !this.state.modalOpen
     });
   }
 
@@ -45,11 +55,15 @@ class BoardsAndItems extends Component {
     return (
       <section className="section">
         <h1 className="has-text-primary title">BOARDS</h1>
+        <button className="navbar-item " onClick={this.toggleModal}>ADD BOARD</button>
+        
         <div className="container is-fluid">
           <div className="columns is-multiline is-4">
             {boards}
           </div>
         </div>
+        {/*When the App component first renders, its isOpen state is false, so the Modal is not rendered*/}
+        <AddToDbModal show={this.state.modalOpen} onClose={this.toggleModal} url='/addBoardToCollection'/>
       </section>
     );
   }
