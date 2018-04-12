@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import BoardsListDropdown from './BoardsListDropdown';
-import AddToDbModal from './AddToDbModal';
 
 // modal Elements such as header and body to be reused in different modal types with various content depending on modal
 
@@ -34,4 +33,4 @@ export const ModalBody = (props) => {
       </section>
     );
   }
-}
+};

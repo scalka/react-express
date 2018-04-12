@@ -1,6 +1,5 @@
 import React from 'react';
 import SaveButton from './SaveButton';
-import { Route } from 'react-router-dom';
 
 class ItemDetail extends React.Component {
   constructor() {
@@ -44,7 +43,7 @@ class ItemDetail extends React.Component {
           <div className="columns">
             <div className="column">
               <div className="box">
-                <img src={this.state.data.Images[0].url_570xN}/>
+                <img src={this.state.data.Images[0].url_570xN} alt={this.state.data.title}/>
               </div>
             </div>
             <div className="column">

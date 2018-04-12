@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ItemCard from './ItemCard';
-import {fetchPosts, buildUrl, getItemsFromCategoryFromEtsy, fetchFromDb} from '../../dataHelperMethods';
+import {buildUrl, fetchFromDb, fetchPosts, getItemsFromCategoryFromEtsy} from '../../dataHelperMethods';
 
 class ItemContainer extends Component {
   constructor() {
@@ -42,9 +42,8 @@ class ItemContainer extends Component {
       });
     });*/
   }
-
+  // get all available categories from database
   getItemsFromCategory(category) {
-    console.log(category);
     const getItemsFromCatUrl = getItemsFromCategoryFromEtsy(category);
     fetchPosts(getItemsFromCatUrl).then( response => {
       this.setState({
@@ -64,7 +63,7 @@ class ItemContainer extends Component {
 
     let categoriesButtons = this.state.categories.map(cat => {
       return (
-        <button className="button" onClick={ (e) => this.getItemsFromCategory(cat.categoryName) }>{cat.categoryName}</button>
+        <button key={cat.categoryName} className="button is-link is-rounded" onClick={ (e) => this.getItemsFromCategory(cat.categoryName) }>{cat.categoryName}</button>
       );
     });
     return (

@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import { fetchFromDb } from '../../dataHelperMethods';
-import {ModalBody} from './ModalElements';
+import React, {Component} from 'react';
+import {fetchFromDb} from '../../dataHelperMethods';
 
 // Dropdown with all boards in db
 

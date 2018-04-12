@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { fetchFromDb } from '../../dataHelperMethods';
+import React, {Component} from 'react';
+import {fetchFromDb} from '../../dataHelperMethods';
 import AddToDbModal from './AddToDbModal';
 
 class BoardsAndItems extends Component {

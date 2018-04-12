@@ -2,17 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76edb53d-32ab-4326-8f36-e6ba9dfa1322" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" afterPath="$PROJECT_DIR$/client/src/App.js" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.test.js" afterPath="$PROJECT_DIR$/client/src/App.test.js" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/BoardsContainer/AddToDbModal.js" afterPath="$PROJECT_DIR$/client/src/Components/BoardsContainer/AddToDbModal.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItems.js" afterPath="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsList.js" afterPath="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsListDropdown.js" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js" afterPath="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsListDropdown.js" afterPath="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsListDropdown.js" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/BoardsContainer/ModalElements.js" afterPath="$PROJECT_DIR$/client/src/Components/BoardsContainer/ModalElements.js" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/ItemContainer/CategoryButton.js" afterPath="$PROJECT_DIR$/client/src/Components/ItemContainer/CategoryButton.js" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemCard.js" afterPath="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemCard.js" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemContainer.js" afterPath="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemContainer.js" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemDetail.js" afterPath="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemDetail.js" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/ItemContainer/SaveButton.js" afterPath="$PROJECT_DIR$/client/src/Components/ItemContainer/SaveButton.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/buildUrl.js" afterPath="$PROJECT_DIR$/client/src/dataHelperMethods.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.css" afterPath="$PROJECT_DIR$/client/src/index.css" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.scss" afterPath="$PROJECT_DIR$/client/src/index.scss" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/ItemContainer/Tag.js" afterPath="$PROJECT_DIR$/client/src/Components/ItemContainer/Tag.js" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Menu/Menu.js" afterPath="$PROJECT_DIR$/client/src/Components/Menu/Menu.js" />
+      <change beforePath="$PROJECT_DIR$/client/src/dataHelperMethods.js" afterPath="$PROJECT_DIR$/client/src/dataHelperMethods.js" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" afterPath="$PROJECT_DIR$/client/src/index.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,10 +32,22 @@
           <file leaf-file-name="ItemContainer.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/ItemContainer.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="490">
-                  <caret line="66" column="94" lean-forward="false" selection-start-line="66" selection-start-column="94" selection-end-line="66" selection-end-column="94" />
+                <state relative-caret-position="116">
+                  <caret line="44" column="47" lean-forward="false" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
                   <folding>
-                    <element signature="e#0#41#0" expanded="true" />
+                    <element signature="e#0#39#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ItemDetail.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/ItemDetail.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="266">
+                  <caret line="45" column="89" lean-forward="false" selection-start-line="45" selection-start-column="89" selection-end-line="45" selection-end-column="89" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -40,11 +56,9 @@
           <file leaf-file-name="BoardsAndItemsContainer.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="490">
-                  <caret line="67" column="48" lean-forward="false" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
-                  <folding>
-                    <element signature="e#0#41#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="487">
+                  <caret line="66" column="32" lean-forward="false" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -52,11 +66,9 @@
           <file leaf-file-name="SaveButton.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/SaveButton.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="22" column="58" lean-forward="false" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
-                  <folding>
-                    <element signature="e#0#41#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="340">
+                  <caret line="20" column="58" lean-forward="false" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -88,8 +100,8 @@
           <file leaf-file-name="dataHelperMethods.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/src/dataHelperMethods.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="629">
-                  <caret line="37" column="23" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="23" />
+                <state relative-caret-position="17">
+                  <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -116,8 +128,10 @@
         <option value="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js" />
         <option value="$PROJECT_DIR$/client/src/Components/ItemContainer/SaveButton.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/client/src/dataHelperMethods.js" />
         <option value="$PROJECT_DIR$/client/src/index.scss" />
+        <option value="$PROJECT_DIR$/client/src/Components/Menu/Menu.js" />
+        <option value="$PROJECT_DIR$/client/src/dataHelperMethods.js" />
+        <option value="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemDetail.js" />
         <option value="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemContainer.js" />
       </list>
     </option>
@@ -219,6 +233,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="C:\Users\calka\Documents\Y4\AdvancedJS\pinboard-react-express-mongo\node_modules\eslint" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -328,12 +343,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523540520331</updated>
-      <workItem from="1523540523963" duration="5696000" />
+      <workItem from="1523540523963" duration="7063000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5696000" />
+    <option name="totallyTimeSpent" value="7063000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -344,7 +359,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -391,9 +406,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="76" column="12" lean-forward="true" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -401,9 +414,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -411,9 +422,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -433,14 +442,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/dataHelperMethods.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="23" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/index.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -451,40 +452,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/SaveButton.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="58" lean-forward="false" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/Components/Menu/Menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="340">
+          <caret line="20" column="58" lean-forward="false" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="67" column="48" lean-forward="false" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
+        <state relative-caret-position="487">
+          <caret line="66" column="32" lean-forward="false" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Components/Menu/Menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/dataHelperMethods.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/ItemDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="45" column="89" lean-forward="false" selection-start-line="45" selection-start-column="89" selection-end-line="45" selection-end-column="89" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/ItemContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="66" column="94" lean-forward="false" selection-start-line="66" selection-start-column="94" selection-end-line="66" selection-end-column="94" />
+        <state relative-caret-position="116">
+          <caret line="44" column="47" lean-forward="false" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

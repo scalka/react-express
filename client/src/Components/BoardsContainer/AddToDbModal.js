@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { postToDb } from '../../dataHelperMethods';
-import { ModalHeader, ModalBody } from './ModalElements';
+import React, {Component} from 'react';
+import {postToDb} from '../../dataHelperMethods';
+import {ModalBody, ModalHeader} from './ModalElements';
 
 class AddToDbModal extends Component {
   constructor() {

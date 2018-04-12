@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import ItemCard from './ItemCard';
-import { fetchPosts, buildUrl } from '../../dataHelperMethods';
+import React, {Component} from 'react';
 import AddToDbModal from '../BoardsContainer/AddToDbModal';
 
 class SaveButton extends Component {

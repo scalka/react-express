@@ -1,11 +1,12 @@
 import config from './config.json';
-const querystring = require('querystring');
+
 const fetchJsonp = require('fetch-jsonp');
 const etsyKey = config.etsyKey;
 
 export const buildUrl = (filtersApplied) => {
 //  console.log(filtersApplied);
 
+  /* code if decided to use filters
   let parameters = [];
   for(let param in filtersApplied) {
     if(`${filtersApplied[param]}` && param !== 'jobs') {
@@ -15,6 +16,7 @@ export const buildUrl = (filtersApplied) => {
     }
   }
   let params = querystring.stringify(parameters);
+  */
   //https://api.etsy.com/v2/listings/active.js?api_key=${etsyKey}&category=supplies&keywords=whiskey&includes=Images,Shop
   let request = `https://api.etsy.com/v2/listings/active.js?api_key=${etsyKey}&&includes=Images`;
   //console.log(`https://api-v2.themuse.com/jobs?api_key=${request}&${etsyKey}`);
@@ -29,9 +31,9 @@ export const buildBasicUrl = (route) => {
   return basicUrl;
 };
 
-export const getItemsFromCategoryFromEtsy = () => {
+export const getItemsFromCategoryFromEtsy = (category) => {
   //https://api.etsy.com/v2/taxonomy/categories?api_key=186o1pdbspolpegt8nk87739
-  let basicUrl = `https://api.etsy.com/v2/listings/active.js?api_key=${etsyKey}&category=accessories&includes=Images`;
+  let basicUrl = `https://api.etsy.com/v2/listings/active.js?api_key=${etsyKey}&category=${category}&includes=Images`;
   return basicUrl;
 };
 

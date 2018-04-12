@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Tag from './Tag';
-import { Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import SaveButton from './SaveButton';
 
 class ItemCard extends React.Component {
