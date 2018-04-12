@@ -6,7 +6,7 @@ class Tag extends React.Component {
     let tags = this.props.tags.map( item => {
       return (
         <span className="tag is-primary" key={item}>{item}</span>
-      )
+      );
     });
     return tags;
   }

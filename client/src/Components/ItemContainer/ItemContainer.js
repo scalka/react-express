@@ -28,7 +28,6 @@ class ItemContainer extends Component {
 
     // fetchPosts from etsy returns promise
     fetchFromDb('/categories').then( response => {
-      console.log(response);
       this.setState({
         categories: response
       });

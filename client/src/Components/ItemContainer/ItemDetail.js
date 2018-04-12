@@ -1,5 +1,6 @@
 import React from 'react';
 import SaveButton from './SaveButton';
+import Tag from './Tag';
 
 class ItemDetail extends React.Component {
   constructor() {
@@ -44,14 +45,18 @@ class ItemDetail extends React.Component {
             <div className="column">
               <div className="box">
                 <img src={this.state.data.Images[0].url_570xN} alt={this.state.data.title}/>
+                <hr/>
+                <Tag tags={this.state.data.tags ? this.state.data.tags : ['tags'] }/>
+                <hr/>
+                <SaveButton item={this.state.data}/>
               </div>
             </div>
             <div className="column">
               <div className="card">
                 <header className="card-header">
                   <p className="card-header-title">{this.state.data.title}</p>
-                  <SaveButton item={this.state.data}/>
                 </header>
+
                 <div className="card-content">
                   <div className="columns has-text-left">
                     <div className="column">
@@ -73,6 +78,7 @@ class ItemDetail extends React.Component {
                       </div>
                     </div>
                   </div>
+                  <hr/>
                   <div className="has-text-left">
                     <p>{this.state.data.description}</p>
                   </div>
