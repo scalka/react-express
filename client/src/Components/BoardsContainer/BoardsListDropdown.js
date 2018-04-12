@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { fetchFromDb } from '../../buildUrl';
+import { fetchFromDb } from '../../dataHelperMethods';
+import {ModalBody} from './ModalElements';
+
+// Dropdown with all boards in db
 
 class BoardsList extends Component {
   constructor() {
@@ -22,12 +25,16 @@ class BoardsList extends Component {
     });
 
     return (
-      <section className="section">
-        <h1 className="has-text-primary is-size-4">Boards</h1>
-        <select value={this.props.selected} name={this.props.name} onChange={this.props.handleChange}>
-          {boards}
-        </select>
-      </section>
+
+      <div className="field">
+        <label className="has-text-primary is-size-4">Select a board: </label>
+        <div className="select">
+          <select className="dropdown" value={this.props.selected} name={this.props.name} onChange={this.props.handleChange}>
+            {boards}
+          </select>
+        </div>
+      </div>
+
     );
   }
 }

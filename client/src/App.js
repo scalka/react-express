@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Menu from './Components/Menu/Menu';
 import ItemContainer from './Components/ItemContainer/ItemContainer';
-import BoardsAndItems from './Components/BoardsContainer/BoardsAndItems';
+import BoardsAndItems from './Components/BoardsContainer/BoardsAndItemsContainer';
 import ItemDetail from './Components/ItemContainer/ItemDetail';
 
 import {BrowserRouter, Route} from 'react-router-dom';

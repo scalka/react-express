@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { postToDb } from '../../buildUrl';
+import { postToDb } from '../../dataHelperMethods';
 import { ModalHeader, ModalBody } from './ModalElements';
 
 class AddToDbModal extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       boardName: ''
     };
@@ -13,8 +13,9 @@ class AddToDbModal extends Component {
   }
 
   handleSubmitToDbToCollection(e, url) {
-    // console.log("outside --- " + this.state.boardName);
     let body;
+    // if creates body for adding a board to db
+    // if else creates a body for adding an item to the board
     if(url === '/addBoardToCollection') {
       //console.log("addBoardToCollection --- " + this.state.boardName);
       body = JSON.stringify({
@@ -33,15 +34,19 @@ class AddToDbModal extends Component {
         }
       });
     }
-    let add = postToDb(url, body);
+    // sends a request to the db using a helper method from dataHelperMethods.js
+    postToDb(url, body);
+    // prevents appending default form requests to url
     e.preventDefault();
+    // calls a click on a button and closes modal
     this.closeButton.click();
   }
 
   handleChange(event) {
+
     const name = event.target.name;
     //console.log(event.target.value);
-    //console.log(name);
+    console.log("addtodbmodal" + name);
     this.setState({
       [name]: event.target.value
     });

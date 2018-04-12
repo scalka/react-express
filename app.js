@@ -37,6 +37,17 @@ app.get('/boardsCollection', (req, res) => {
   });
 });
 
+app.get('/categories', (req, res) => {
+  // find entries in the database, sort it on score and limit to first six
+  // find returns cursor so we need to use toArray method
+  db.collection('categories').find().toArray((err, result) => {
+    if (err) return console.log(err);
+    // send result to the client
+    //console.log(result);
+    res.send(result);
+  });
+});
+
 app.post('/addBoardToCollection', (req, res) => {
   // create boards collection and saves entry if board name does not exist otherwise updates
   db.collection('boardsCollection').save(req.body, (err, result) => {

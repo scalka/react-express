@@ -1,32 +1,52 @@
 import React, { Component } from 'react';
 import ItemCard from './ItemCard';
-import { fetchPosts, buildUrl } from '../../buildUrl';
-import AddToDbModal from '../BoardsContainer/AddToDbModal';
+import {fetchPosts, buildUrl, getItemsFromCategoryFromEtsy, fetchFromDb} from '../../dataHelperMethods';
 
 class ItemContainer extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       data: [],
       filters: [],
       categories: [],
-      users: [],
-      modalOpen: false,
+      users: []
     };
-    this.openModalWithItem = this.openModalWithItem.bind(this);
-  }
 
-  openModalWithItem(item) {
-    this.setState({
-      modalOpen: !this.state.modalOpen,
-      item: item
-    });
+    this.getItemsFromCategory = this.getItemsFromCategory.bind(this);
   }
 
   componentWillMount() {
-    const request = buildUrl();
+    const itemsRequest = buildUrl();
+
+
     // fetchPosts from etsy returns promise
-    fetchPosts(request).then( response => {
+    fetchPosts(itemsRequest).then( response => {
+      this.setState({
+        data: response.results
+      });
+    });
+
+    // fetchPosts from etsy returns promise
+    fetchFromDb('/categories').then( response => {
+      console.log(response);
+      this.setState({
+        categories: response
+      });
+    });
+
+    /*// fetchPosts from etsy returns promise
+    fetchPosts(categoriesUrl).then( response => {
+      console.log(response);
+      this.setState({
+        categories: response.results
+      });
+    });*/
+  }
+
+  getItemsFromCategory(category) {
+    console.log(category);
+    const getItemsFromCatUrl = getItemsFromCategoryFromEtsy(category);
+    fetchPosts(getItemsFromCatUrl).then( response => {
       this.setState({
         data: response.results
       });
@@ -36,26 +56,29 @@ class ItemContainer extends Component {
   render() {
     //create Item card for each item
     let itemsList = this.state.data.map(item => {
-      //add button as a prop to be able to open modal and pass item to modal
-
-
       return (
         <ItemCard key={item.listing_id} id={item.listing_id} data={item} title={item.title} tags={item.taxonomy_path} price={item.price} images={item.Images}
         />
       );
     });
 
-
-    /*    let categories = this.state.data.map(item => {
-      console.log(item.category_path);
-    })
-    */
+    let categoriesButtons = this.state.categories.map(cat => {
+      return (
+        <button className="button" onClick={ (e) => this.getItemsFromCategory(cat.categoryName) }>{cat.categoryName}</button>
+      );
+    });
     return (
-      <section className="section">
-        <div className="columns is-multiline">
-          {itemsList}
-        </div>
-      </section>
+      <div>
+        <section className="section">
+          {categoriesButtons}
+        </section>
+        <section className="section">
+          <div className="columns is-multiline">
+            {itemsList}
+          </div>
+        </section>
+
+      </div>
     );
   }
 }

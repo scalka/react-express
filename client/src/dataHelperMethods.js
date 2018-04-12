@@ -1,10 +1,11 @@
 import config from './config.json';
 const querystring = require('querystring');
 const fetchJsonp = require('fetch-jsonp');
+const etsyKey = config.etsyKey;
 
 export const buildUrl = (filtersApplied) => {
 //  console.log(filtersApplied);
-  let etsyKey = config.etsyKey;
+
   let parameters = [];
   for(let param in filtersApplied) {
     if(`${filtersApplied[param]}` && param !== 'jobs') {
@@ -21,10 +22,16 @@ export const buildUrl = (filtersApplied) => {
 };
 
 export const buildBasicUrl = (route) => {
-  let etsyKey = config.etsyKey;
+
   //https://api.etsy.com/v2/taxonomy/categories?api_key=186o1pdbspolpegt8nk87739
-  let basicUrl = `https://api.etsy.com/v2/${route}?api_key=${etsyKey}`;
+  let basicUrl = `https://api.etsy.com/v2/listings/active.js?api_key=${etsyKey}&category=supplies&includes=Images`;
   console.log(basicUrl);
+  return basicUrl;
+};
+
+export const getItemsFromCategoryFromEtsy = () => {
+  //https://api.etsy.com/v2/taxonomy/categories?api_key=186o1pdbspolpegt8nk87739
+  let basicUrl = `https://api.etsy.com/v2/listings/active.js?api_key=${etsyKey}&category=accessories&includes=Images`;
   return basicUrl;
 };
 
@@ -53,10 +60,8 @@ export const postToDb = (url, body) => {
     }
   })
     .then(res => {
-      console.log("response" + res);
+
       if(res.ok) {
-
-
         return console.log('record added');
       }
       throw new Error('Request failed');
@@ -76,6 +81,7 @@ export const fetchFromDb = (url) => {
     })
     .catch(error => console.log(error));
 };
+
 /*
 export const fetchPosts = (filtersApplied, currentPage) => dispatch => {
   const requestedAt = Date.now()

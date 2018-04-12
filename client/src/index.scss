@@ -24,6 +24,18 @@ a {
   color: $navy;
 }
 
+.items-ul {
+  display: flex;
+	flex-flow: row wrap; /*direction "row" and yes, please wrap the items.*/
+	justify-content: space-around;
+	padding: 0;
+	list-style: none;
+}
+
+.items-li {
+  flex: 0 1 auto; /*flex-grow: 0; flex-shrink: 1; flex-basis: auto*/
+}
+
 .tag {
   margin-right: 2px;
 }

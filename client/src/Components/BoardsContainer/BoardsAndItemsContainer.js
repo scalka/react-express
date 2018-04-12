@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { fetchFromDb } from '../../buildUrl';
+import { fetchFromDb } from '../../dataHelperMethods';
 import AddToDbModal from './AddToDbModal';
 
 class BoardsAndItems extends Component {
@@ -20,8 +20,6 @@ class BoardsAndItems extends Component {
     });
   }
 
-
-
   // open or close modal
   toggleModal() {
     this.setState({
@@ -40,11 +38,12 @@ class BoardsAndItems extends Component {
   render() {
     let boards = this.state.boards.map(board => {
       let items = [];
+
       for (let item of board.items) {
         items.push(
-          <div className="tile is-4 is-child" key={board.boardName + item.listing_id}>
-            <img src={item.images[0].url_75x75} alt={item.title}/>
-          </div>);
+          <li className="items-li" key={board.boardName + item.listing_id}>
+            <img className="" src={item.images[0].url_75x75} alt={item.title}/>
+          </li>);
       }
       return(
         <div className="column is-4" key={board._id}>
@@ -54,10 +53,10 @@ class BoardsAndItems extends Component {
                 {board.boardName.toUpperCase()}
               </p>
             </header>
-            <div className="card-content tile is-ancestor">
-              <div className="tile is-parent">
+            <div className="card-content">
+              <ul className="items-ul">
                 {items}
-              </div>
+              </ul>
             </div>
           </div>
         </div>);
@@ -65,8 +64,10 @@ class BoardsAndItems extends Component {
 
     return (
       <section className="section">
+        <button className="button is-primary is-pulled-right" onClick={this.toggleModal}>ADD BOARD</button>
         <h1 className="has-text-primary title">BOARDS</h1>
-        <button className="navbar-item " onClick={this.toggleModal}>ADD BOARD</button>
+
+
 
         <div className="container is-fluid">
           <div className="columns is-multiline is-4">

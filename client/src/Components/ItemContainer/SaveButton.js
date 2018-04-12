@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import ItemCard from './ItemCard';
-import { fetchPosts, buildUrl } from '../../buildUrl';
+import { fetchPosts, buildUrl } from '../../dataHelperMethods';
 import AddToDbModal from '../BoardsContainer/AddToDbModal';
 
 class SaveButton extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       modalOpen: false
     };
@@ -20,10 +20,11 @@ class SaveButton extends Component {
   }
 
   render() {
-    let saveButton = <a className="button" onClick={() => this.openModalWithItem(this.props.item)}>
+    let saveButton = <a className="button is-danger" onClick={() => this.openModalWithItem(this.props.item)}>
       <span className="icon is-small">
         <i className="fas fa-heart"></i>
       </span>
+      <p>SAVE</p>
     </a>;
     return (
       <div>
