@@ -6,7 +6,7 @@ const server = require('http').Server(app); // creates http server which is usin
 const MongoClient = require('mongodb').MongoClient; // import mongo and create mongo client
 const bodyParser = require('body-parser'); // import body parser (to use in req.body)
 
-// define directiories which are exposed to web
+// define directories which are exposed to web
 app.use(express.static(__dirname + '/node_modules'));
 // serve files from the public directory
 app.use(express.static('public'));
@@ -20,7 +20,7 @@ MongoClient.connect(url, (err, database) => {
   if(err) { return console.log(err); }
   db = database;
   // start the express web server listening on 8080
-  server.listen(8000, () => {
+  server.listen(process.env.PORT || 8000, () => {
     console.log('Well done, now I am listening on ', server.address().port);
   });
 });

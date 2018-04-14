@@ -7,9 +7,7 @@ class ItemContainer extends Component {
     super();
     this.state = {
       data: [],
-      filters: [],
-      categories: [],
-      users: []
+      categories: []
     };
 
     this.getItemsFromCategory = this.getItemsFromCategory.bind(this);
