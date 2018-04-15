@@ -16,13 +16,13 @@ class AddToDbModal extends Component {
     let body;
     // if creates body for adding a board to db
     // if else creates a body for adding an item to the board
-    if(url === '/addBoardToCollection') {
+    if(url === '/api/addBoardToCollection') {
       //console.log("addBoardToCollection --- " + this.state.boardName);
       body = JSON.stringify({
         boardName: this.state.boardName,
         items: []
       });
-    } else if (url === '/addItemToBoard') {
+    } else if (url === '/api/addItemToBoard') {
     //  console.log("addItemToBoard --- " + this.state.boardName);
       body = JSON.stringify({
         boardName: this.state.boardName,

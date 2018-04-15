@@ -13,7 +13,7 @@ class BoardsAndItems extends Component {
   }
 
   componentWillMount() {
-    fetchFromDb('/boardsCollection').then( response => {
+    fetchFromDb('/api/boardsCollection').then( response => {
       this.setState({
         boards: response
       });
@@ -27,7 +27,7 @@ class BoardsAndItems extends Component {
     });
     // fetch all boards to include the added one
     if(!this.modalOpen) {
-      fetchFromDb('/boardsCollection').then( response => {
+      fetchFromDb('/api/boardsCollection').then( response => {
         this.setState({
           boards: response
         });
