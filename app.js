@@ -5,6 +5,7 @@ const app = express(); // sets up an (express) app
 const server = require('http').Server(app); // creates http server which is using (express) app
 const MongoClient = require('mongodb').MongoClient; // import mongo and create mongo client
 const bodyParser = require('body-parser'); // import body parser (to use in req.body)
+require('dotenv').config();
 
 // define directories which are exposed to web
 app.use(express.static(__dirname + '/node_modules'));
@@ -16,11 +17,13 @@ app.use(bodyParser.urlencoded({extended: true})); // to support URL-encoded bodi
 let db;
 const url = 'mongodb://localhost:27017/boards'; // db url
 // connect to the db and start the express server
-MongoClient.connect(url, (err, database) => {
+MongoClient.connect(process.env.MONGODB_URI, (err, database) => {
   if(err) { return console.log(err); }
+  // Save database object from the callback for reuse
   db = database;
   // start the express web server listening on 8080
   server.listen(process.env.PORT || 8000, () => {
+    let port = server.address().port;
     console.log('Well done, now I am listening on ', server.address().port);
   });
 });
