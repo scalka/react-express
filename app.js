@@ -17,7 +17,6 @@ app.use(bodyParser.urlencoded({extended: true})); // to support URL-encoded bodi
 let db;
 //const url = 'mongodb://localhost:27017/boards'; // db url
 const url = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_SERVER}`;
-console.log(url);
 // connect to the db and start the express server
 MongoClient.connect(url, (err, database) => {
   if(err) { return console.log(err); }
@@ -30,7 +29,12 @@ MongoClient.connect(url, (err, database) => {
   });
 });
 
+
 // ROUTING
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + 'client/public/index.html');
+});
+
 app.get('/boardsCollection', (req, res) => {
   // find entries in the database, sort it on score and limit to first six
   // find returns cursor so we need to use toArray method
