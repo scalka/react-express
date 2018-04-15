@@ -37,7 +37,7 @@ app.get('/', (req, res) => {
 });
 
 // ROUTING
-app.get('/api/boardsCollection', (req, res) => {
+app.get('/boardsCollection', (req, res) => {
   // find entries in the database, sort it on score and limit to first six
   // find returns cursor so we need to use toArray method
   db.collection('boardsCollection').find().toArray((err, result) => {
@@ -48,7 +48,7 @@ app.get('/api/boardsCollection', (req, res) => {
   });
 });
 
-app.get('/api/categories', (req, res) => {
+app.get('/categories', (req, res) => {
   // find entries in the database, sort it on score and limit to first six
   // find returns cursor so we need to use toArray method
   db.collection('categories').find().toArray((err, result) => {
@@ -59,7 +59,7 @@ app.get('/api/categories', (req, res) => {
   });
 });
 
-app.post('/api/addBoardToCollection', (req, res) => {
+app.post('/addBoardToCollection', (req, res) => {
   // create boards collection and saves entry if board name does not exist otherwise updates
   db.collection('boardsCollection').save(req.body, (err, result) => {
     if (err) { return console.log(err); }
@@ -69,7 +69,7 @@ app.post('/api/addBoardToCollection', (req, res) => {
   });
 });
 
-app.post('/api/addItemToBoard', (req, res) => {
+app.post('/addItemToBoard', (req, res) => {
   console.log(req.body);
   db.collection('boardsCollection').findOneAndUpdate(
     {boardName: req.body.boardName},

@@ -5,7 +5,7 @@ import BoardsListDropdown from './BoardsListDropdown';
 
 export const ModalHeader = (props) => {
   let header;
-  if(props.url === '/api/addBoardToCollection') {
+  if(props.url === '/addBoardToCollection') {
     header = 'Add new board to collection';
   } else if (props.url === '/addItemToBoard') {
     header = 'Add item to board';
@@ -14,7 +14,7 @@ export const ModalHeader = (props) => {
 };
 
 export const ModalBody = (props) => {
-  if(props.url === '/api/addBoardToCollection') {
+  if(props.url === '/addBoardToCollection') {
     return (
       <section className="modal-card-body">
         <div className="field">
@@ -25,7 +25,7 @@ export const ModalBody = (props) => {
         </div>
       </section>
     );
-  } else if (props.url === '/api/addItemToBoard') {
+  } else if (props.url === '/addItemToBoard') {
     return (
       <section className="modal-card-body">
         <BoardsListDropdown name="boardName" handleChange={props.handleChange}/>

@@ -11,7 +11,7 @@ class BoardsList extends Component {
     };
   }
   componentWillMount() {
-    fetchFromDb('/api/boardsCollection').then( response => {
+    fetchFromDb('/boardsCollection').then( response => {
       this.setState({
         boards: response
       });
