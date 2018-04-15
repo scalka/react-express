@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ItemCard from './ItemCard';
 import {buildUrl, fetchFromDb, fetchPosts, getItemsFromCategoryFromEtsy} from '../../dataHelperMethods';
 
+// Main page
 class ItemContainer extends Component {
   constructor() {
     super();
@@ -15,31 +16,20 @@ class ItemContainer extends Component {
 
   componentWillMount() {
     const itemsRequest = buildUrl();
-
-
     // fetchPosts from etsy returns promise
     fetchPosts(itemsRequest).then( response => {
       this.setState({
         data: response.results
       });
     });
-
-    // fetchPosts from etsy returns promise
+    // get available categories from database
     fetchFromDb('/categories').then( response => {
       this.setState({
         categories: response
       });
     });
-
-    /*// fetchPosts from etsy returns promise
-    fetchPosts(categoriesUrl).then( response => {
-      console.log(response);
-      this.setState({
-        categories: response.results
-      });
-    });*/
   }
-  // get all available categories from database
+  // get items from a category and update data for items
   getItemsFromCategory(category) {
     const getItemsFromCatUrl = getItemsFromCategoryFromEtsy(category);
     fetchPosts(getItemsFromCatUrl).then( response => {
@@ -52,17 +42,13 @@ class ItemContainer extends Component {
   render() {
     //create Item card for each item
     let itemsList = this.state.data.map(item => {
-      return (
-        <ItemCard key={item.listing_id} id={item.listing_id} data={item} title={item.title} tags={item.taxonomy_path} price={item.price} images={item.Images}
-        />
-      );
+      return ( <ItemCard key={item.listing_id} id={item.listing_id} data={item} title={item.title} tags={item.taxonomy_path} price={item.price} images={item.Images}/> );
     });
 
     let categoriesButtons = this.state.categories.map(cat => {
-      return (
-        <button key={cat.categoryName} className="button is-link is-rounded" onClick={ (e) => this.getItemsFromCategory(cat.categoryName) }>{cat.categoryName}</button>
-      );
+      return ( <button key={cat.categoryName} className="button is-link is-rounded" onClick={ (e) => this.getItemsFromCategory(cat.categoryName) }>{cat.categoryName}</button> );
     });
+
     return (
       <div>
         <section className="section">
@@ -73,7 +59,6 @@ class ItemContainer extends Component {
             {itemsList}
           </div>
         </section>
-
       </div>
     );
   }

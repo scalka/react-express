@@ -28,7 +28,7 @@ export const ModalBody = (props) => {
   } else if (props.url === '/addItemToBoard') {
     return (
       <section className="modal-card-body">
-        <BoardsListDropdown name="boardName" handleChange={props.handleChange}/>
+        <BoardsListDropdown name="boardName" value={props.value} handleChange={props.handleChange}/>
 
       </section>
     );

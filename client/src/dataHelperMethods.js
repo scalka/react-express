@@ -3,44 +3,19 @@ const fetchJsonp = require('fetch-jsonp');
 //  load the values from the .env file into application's process.env
 require('dotenv').config();
 
-const etsyKey = process.env.ETSY_KEY;
+const etsyKey = process.env.ETSY_KEY || config.etsyKey;
 
-
-
-export const buildUrl = (filtersApplied) => {
-//  console.log(filtersApplied);
-
-  /* code if decided to use filters
-  let parameters = [];
-  for(let param in filtersApplied) {
-    if(`${filtersApplied[param]}` && param !== 'jobs') {
-      console.log(param);
-      console.log(`${filtersApplied[param]}`);
-      parameters[param] = `${filtersApplied[param]}`;
-    }
-  }
-  let params = querystring.stringify(parameters);
-  */
-  //https://api.etsy.com/v2/listings/active.js?api_key=${etsyKey}&category=supplies&keywords=whiskey&includes=Images,Shop
+// get items from etsy
+export const buildUrl = () => {
   let request = `https://api.etsy.com/v2/listings/active.js?api_key=${etsyKey}&&includes=Images`;
-  //console.log(`https://api-v2.themuse.com/jobs?api_key=${request}&${etsyKey}`);
   return request;
 };
-
-export const buildBasicUrl = (route) => {
-
-  //https://api.etsy.com/v2/taxonomy/categories?api_key=186o1pdbspolpegt8nk87739
-  let basicUrl = `https://api.etsy.com/v2/listings/active.js?api_key=${etsyKey}&category=supplies&includes=Images`;
-  console.log(basicUrl);
-  return basicUrl;
-};
-
+// get items in a category
 export const getItemsFromCategoryFromEtsy = (category) => {
-  //https://api.etsy.com/v2/taxonomy/categories?api_key=186o1pdbspolpegt8nk87739
   let basicUrl = `https://api.etsy.com/v2/listings/active.js?api_key=${etsyKey}&category=${category}&includes=Images`;
   return basicUrl;
 };
-
+//fetch posts from etsy
 export const fetchPosts = (request) => {
   return fetchJsonp(request, {timeout: 10000})
     .then(response => {
@@ -54,9 +29,8 @@ export const fetchPosts = (request) => {
       console.log(error);
     });
 };
-
+// post to mongoDb
 export const postToDb = (url, body) => {
-  console.log(body);
   return fetch(url, {
     method: 'POST',
     body: body,
@@ -66,7 +40,6 @@ export const postToDb = (url, body) => {
     }
   })
     .then(res => {
-
       if(res.ok) {
         return console.log('record added');
       }
@@ -76,7 +49,7 @@ export const postToDb = (url, body) => {
       console.log(err);
     });
 };
-
+// get from MongoDb
 export const fetchFromDb = (url) => {
   return fetch(url)
     .then(res => {
@@ -87,14 +60,3 @@ export const fetchFromDb = (url) => {
     })
     .catch(error => console.log(error));
 };
-
-/*
-export const fetchPosts = (filtersApplied, currentPage) => dispatch => {
-  const requestedAt = Date.now()
-  dispatch(requestPosts(requestedAt))
-  return fetch(buildSearchUrl(filtersApplied, currentPage))
-    .then(response => response.json())
-    // temporarily simulating a slow response over the network
-    .then(json => new Promise(resolve => setTimeout(() => resolve(json), 1000)))
-    .then(json => dispatch(receivePosts(json, requestedAt)))
-}*/

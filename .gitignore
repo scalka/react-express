@@ -3,6 +3,7 @@
 # dependencies
 **/node_modules
 **/.env
+**/server.js
 
 # testing
 /coverage

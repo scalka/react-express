@@ -11,24 +11,12 @@ class ItemDetail extends React.Component {
   }
 
   componentWillMount() {
-    // console.log(this.props);
     if(this.props.location.state) {
       this.setState({
         data: this.props.location.state
       });
-    } else {
-      this.setState({
-        data: this.props.history.state
-      });
     }
   }
-
-  updateState() {
-    this.setState({
-      data: this.props.history.state
-    });
-  }
-
 
   render() {
     const materials = this.state.data.materials.map( material => {

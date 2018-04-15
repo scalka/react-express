@@ -17,23 +17,20 @@ class BoardsList extends Component {
       });
     });
   }
-
   render() {
     let boards = this.state.boards.map(board => {
       return(<option key={board.boardName} value={board.boardName}>{board.boardName}</option>);
     });
-
     return (
-
       <div className="field">
         <label className="has-text-primary is-size-4">Select a board: </label>
         <div className="select">
           <select className="dropdown" value={this.props.selected} name={this.props.name} onChange={this.props.handleChange}>
+            <option key="Empty" value="Empty"></option>
             {boards}
           </select>
         </div>
       </div>
-
     );
   }
 }

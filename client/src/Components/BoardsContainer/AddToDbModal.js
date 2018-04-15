@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {postToDb} from '../../dataHelperMethods';
 import {ModalBody, ModalHeader} from './ModalElements';
 
+// Modal that handles posting to database
 class AddToDbModal extends Component {
   constructor() {
     super();
@@ -17,13 +18,11 @@ class AddToDbModal extends Component {
     // if creates body for adding a board to db
     // if else creates a body for adding an item to the board
     if(url === '/addBoardToCollection') {
-      //console.log("addBoardToCollection --- " + this.state.boardName);
       body = JSON.stringify({
         boardName: this.state.boardName,
         items: []
       });
     } else if (url === '/addItemToBoard') {
-    //  console.log("addItemToBoard --- " + this.state.boardName);
       body = JSON.stringify({
         boardName: this.state.boardName,
         item: {
@@ -43,10 +42,7 @@ class AddToDbModal extends Component {
   }
 
   handleChange(event) {
-
     const name = event.target.name;
-    //console.log(event.target.value);
-    console.log("addtodbmodal" + name);
     this.setState({
       [name]: event.target.value
     });
@@ -79,6 +75,5 @@ class AddToDbModal extends Component {
     );
   }
 }
-
 
 export default AddToDbModal;
