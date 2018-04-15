@@ -1,11 +1,11 @@
 import config from './config.json';
 const fetchJsonp = require('fetch-jsonp');
 //  load the values from the .env file into application's process.env
-// ('dotenv').config();
+require('dotenv').config();
 
-const etsyKey = config.etsyKey;
+const etsyKey = process.env.ETSY_KEY;
 
-console.log(process.env);
+
 
 export const buildUrl = (filtersApplied) => {
 //  console.log(filtersApplied);
