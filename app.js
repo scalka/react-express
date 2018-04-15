@@ -15,9 +15,11 @@ app.use(bodyParser.json()); // body parser to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({extended: true})); // to support URL-encoded bodies
 
 let db;
-const url = 'mongodb://localhost:27017/boards'; // db url
+//const url = 'mongodb://localhost:27017/boards'; // db url
+const url = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_SERVER}`;
+console.log(url);
 // connect to the db and start the express server
-MongoClient.connect(process.env.MONGODB_URI, (err, database) => {
+MongoClient.connect(url, (err, database) => {
   if(err) { return console.log(err); }
   // Save database object from the callback for reuse
   db = database;
