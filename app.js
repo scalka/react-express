@@ -10,7 +10,7 @@ require('dotenv').config();
 // define directories which are exposed to web
 app.use(express.static(__dirname + '/node_modules'));
 // serve files from the public directory
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(bodyParser.json()); // body parser to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({extended: true})); // to support URL-encoded bodies
 
@@ -29,12 +29,13 @@ MongoClient.connect(url, (err, database) => {
   });
 });
 
-
-// ROUTING
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/client/src/index.js');
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
+// ROUTING
 app.get('/boardsCollection', (req, res) => {
   // find entries in the database, sort it on score and limit to first six
   // find returns cursor so we need to use toArray method
