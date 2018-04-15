@@ -32,7 +32,7 @@ MongoClient.connect(url, (err, database) => {
 
 // ROUTING
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/client/public/index.html');
+  res.sendFile(__dirname + '/client/src/index.js');
 });
 
 app.get('/boardsCollection', (req, res) => {
