@@ -2,6 +2,7 @@
 console.log('Server-side code running');
 const express = require('express'); // imports express
 const app = express(); // sets up an (express) app
+const path = require('path');
 const server = require('http').Server(app); // creates http server which is using (express) app
 const MongoClient = require('mongodb').MongoClient; // import mongo and create mongo client
 const bodyParser = require('body-parser'); // import body parser (to use in req.body)
