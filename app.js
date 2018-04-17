@@ -11,7 +11,8 @@ require('dotenv').config(); // use environmental variables from .env
 app.use(express.static(__dirname + '/node_modules'));
 // serve files from the public build directory
 app.use(express.static(path.join(__dirname, 'client/build')));
-//app.use(express.static('public'));
+app.use(express.static('public'));
+
 app.use(bodyParser.json()); // body parser to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({extended: true})); // to support URL-encoded bodies
 
@@ -32,9 +33,9 @@ MongoClient.connect(url, (err, database) => {
 
 // ROUTING
 // send back React's index.html file
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/client/build/index.html'));
-});
+});*/
 // get boards and items assigned to boards
 app.get('/boardsCollection', (req, res) => {
   // find entries in the database, find returns cursor so we need to use toArray method
@@ -70,5 +71,19 @@ app.post('/addItemToBoard', (req, res) => {
       console.log(result);
       res.send(result);
       if (err) { return console.log(err); }
+    });
+});
+// delete an item from board
+
+app.delete('/delete/:boardName/:index', (req, res) => {
+  console.log(req.params);
+  db.collection('boardsCollection').update(
+    { boardName: req.params.boardName},
+    { $pull: {items : { listing_id: parseInt(req.params.index) }} },
+    { safe: true},
+    { upsert: true},
+    (err, result) => {
+      console.log(result);
+      res.send(err);
     });
 });

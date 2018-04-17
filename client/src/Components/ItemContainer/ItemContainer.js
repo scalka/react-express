@@ -22,6 +22,7 @@ class ItemContainer extends Component {
         data: response.results
       });
     });
+
     // get available categories from database
     fetchFromDb('/categories').then( response => {
       this.setState({
@@ -42,11 +43,12 @@ class ItemContainer extends Component {
   render() {
     //create Item card for each item
     let itemsList = this.state.data.map(item => {
-      return ( <ItemCard key={item.listing_id} id={item.listing_id} data={item} title={item.title} tags={item.taxonomy_path} price={item.price} images={item.Images}/> );
+      return (
+        <ItemCard key={item.listing_id} id={item.listing_id} data={item} title={item.title}tags={item.taxonomy_path} price={item.price} images={item.Images}/> );
     });
 
     let categoriesButtons = this.state.categories.map(cat => {
-      return ( <button key={cat.categoryName} className="button is-link is-rounded" onClick={ (e) => this.getItemsFromCategory(cat.categoryName) }>{cat.categoryName}</button> );
+      return ( <button key={cat.categoryName} className="button is-link is-rounded has-margin" onClick={ (e) => this.getItemsFromCategory(cat.categoryName) }>{cat.categoryName}</button> );
     });
 
     return (

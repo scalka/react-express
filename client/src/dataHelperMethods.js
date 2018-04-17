@@ -7,14 +7,14 @@ const etsyKey = process.env.ETSY_KEY || config.etsyKey;
 
 // get items from etsy
 export const buildUrl = () => {
-  let request = `https://api.etsy.com/v2/listings/active.js?api_key=${etsyKey}&&includes=Images`;
-  return request;
+  return `https://api.etsy.com/v2/listings/active.js?api_key=${etsyKey}&&includes=Images`;
 };
 // get items in a category
 export const getItemsFromCategoryFromEtsy = (category) => {
-  let basicUrl = `https://api.etsy.com/v2/listings/active.js?api_key=${etsyKey}&category=${category}&includes=Images`;
-  return basicUrl;
+  return `https://api.etsy.com/v2/listings/active.js?api_key=${etsyKey}&category=${category}&includes=Images`;
 };
+
+
 //fetch posts from etsy
 export const fetchPosts = (request) => {
   return fetchJsonp(request, {timeout: 10000})
@@ -59,4 +59,20 @@ export const fetchFromDb = (url) => {
       return data;
     })
     .catch(error => console.log(error));
+};
+
+export const deleteFromDB = (url) => {
+  console.log(url);
+  return fetch(url, {
+    method: 'DELETE'
+  })
+    .then(res => {
+      if(res.ok) {
+        return console.log('record deleted');
+      }
+      throw new Error('Request failed');
+    })
+    .catch(err => {
+      console.log(err);
+    });
 };

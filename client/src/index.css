@@ -6535,6 +6535,9 @@ a {
   flex: 0 1 auto;
   /*flex-grow: 0; flex-shrink: 1; flex-basis: auto*/ }
 
+.has-margin {
+  margin: 5px; }
+
 .tag {
   margin-right: 2px; }
 

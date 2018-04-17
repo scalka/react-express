@@ -23,13 +23,17 @@ class AddToDbModal extends Component {
         items: []
       });
     } else if (url === '/addItemToBoard') {
+      console.log(this.props);
       body = JSON.stringify({
         boardName: this.state.boardName,
         item: {
           listing_id: this.props.item.listing_id,
           title: this.props.item.title,
-          images: this.props.item.Images,
-          tags: this.props.item.tags
+          Images: this.props.item.Images,
+          tags: this.props.item.tags,
+          description: this.props.item.description,
+          materials: this.props.item.materials,
+          category_path: this.props.item.category_path
         }
       });
     }

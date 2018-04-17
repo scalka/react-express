@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {fetchFromDb} from '../../dataHelperMethods';
+import {fetchFromDb, fetchPosts} from '../../dataHelperMethods';
 import AddToDbModal from './AddToDbModal';
+import {Link} from 'react-router-dom';
 
 class BoardsAndItems extends Component {
   constructor() {
@@ -10,6 +11,7 @@ class BoardsAndItems extends Component {
       modalOpen: false
     };
     this.toggleModal = this.toggleModal.bind(this);
+
   }
 
   componentWillMount() {
@@ -19,6 +21,7 @@ class BoardsAndItems extends Component {
       });
     });
   }
+
 
   // open or close modal
   toggleModal() {
@@ -42,7 +45,13 @@ class BoardsAndItems extends Component {
       for (let item of board.items) {
         items.push(
           <li className="items-li" key={board.boardName + item.listing_id}>
-            <img className="" src={item.images[0].url_75x75} alt={item.title}/>
+            <Link to={{
+              pathname: `/itemDetail/${item.listing_id}`,
+              state: item,
+              boardName: board.boardName
+            }}>
+              <img className="" src={item.Images[0].url_75x75} alt={item.title}/>
+            </Link>
           </li>);
       }
       return(
