@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="76edb53d-32ab-4326-8f36-e6ba9dfa1322" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/BoardsContainer/AddToDbModal.js" afterPath="$PROJECT_DIR$/client/src/Components/BoardsContainer/AddToDbModal.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js" afterPath="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemContainer.js" afterPath="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemContainer.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemDetail.js" afterPath="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemDetail.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/dataHelperMethods.js" afterPath="$PROJECT_DIR$/client/src/dataHelperMethods.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.css" afterPath="$PROJECT_DIR$/client/src/index.css" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.scss" afterPath="$PROJECT_DIR$/client/src/index.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,100 +13,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="736">
-                  <caret line="87" column="7" lean-forward="false" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ModalElements.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/Components/BoardsContainer/ModalElements.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="1" column="54" lean-forward="false" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ItemCard.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/ItemCard.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="38" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="BoardsAndItemsContainer.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="646">
-                  <caret line="41" column="49" lean-forward="false" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
-                  <folding>
-                    <element signature="e#0#39#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="dataHelperMethods.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/dataHelperMethods.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="566">
-                  <caret line="66" column="20" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="ItemDetail.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/ItemDetail.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="408">
-                  <caret line="24" column="78" lean-forward="false" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="78" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                    <marker date="1523968840595" expanded="true" signature="949:2930" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="985:2917" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="1021:2902" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="1058:1487" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="1094:1468" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="1370:1462" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="1524:2885" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="1561:2866" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="1610:1715" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="1763:2770" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="1821:2591" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="1866:2566" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="1914:2206" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="1978:2051" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="2100:2177" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="2254:2539" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="2318:2392" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="2441:2510" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="2665:2747" ph="..." />
-                    <marker date="1523968840595" expanded="true" signature="2819:2845" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="736">
+              <caret line="87" column="7" lean-forward="false" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -160,10 +71,11 @@
         <option value="$PROJECT_DIR$/client/src/index.scss" />
         <option value="$PROJECT_DIR$/client/src/Components/BoardsContainer/AddToDbModal.js" />
         <option value="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js" />
-        <option value="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemContainer.js" />
         <option value="$PROJECT_DIR$/client/src/dataHelperMethods.js" />
         <option value="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemDetail.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/client/src/Components/ItemContainer/TitleInput.js" />
+        <option value="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemContainer.js" />
       </list>
     </option>
   </component>
@@ -391,12 +303,12 @@
       <workItem from="1523893680109" duration="4932000" />
       <workItem from="1523950164288" duration="2943000" />
       <workItem from="1523957392811" duration="3830000" />
-      <workItem from="1523966086627" duration="2831000" />
+      <workItem from="1523966086627" duration="4159000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44391000" />
+    <option name="totallyTimeSpent" value="45719000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -442,13 +354,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/SaveButton.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="29" column="71" lean-forward="false" selection-start-line="29" selection-start-column="67" selection-end-line="29" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/ItemCard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -555,7 +460,7 @@
           <caret line="57" column="117" lean-forward="false" selection-start-line="57" selection-start-column="92" selection-end-line="57" selection-end-column="117" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#726#794#0" expanded="false" />
+            <element signature="e#840#908#0" expanded="false" />
             <element signature="n#!!block;n#getItemsFromCategory#0;n#ItemContainer#0" expanded="false" />
           </folding>
         </state>
@@ -795,44 +700,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="41" column="49" lean-forward="false" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/Components/BoardsContainer/ModalElements.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="1" column="54" lean-forward="false" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/ItemCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/ItemContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#726#794#0" expanded="false" />
-            <element signature="n#!!block;n#getItemsFromCategory#0;n#ItemContainer#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -870,6 +738,52 @@
             <marker date="1523968840595" expanded="true" signature="2441:2510" ph="..." />
             <marker date="1523968840595" expanded="true" signature="2665:2747" ph="..." />
             <marker date="1523968840595" expanded="true" signature="2819:2845" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Components/BoardsContainer/ModalElements.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="1" column="54" lean-forward="false" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="49" lean-forward="false" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/ItemCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/TitleInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="163" lean-forward="false" selection-start-line="9" selection-start-column="163" selection-end-line="9" selection-end-column="163" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/ItemContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="67" column="29" lean-forward="false" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#840#908#0" expanded="false" />
+            <element signature="n#!!block;n#getItemsFromCategory#0;n#ItemContainer#0" expanded="false" />
           </folding>
         </state>
       </provider>

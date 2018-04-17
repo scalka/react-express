@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ItemCard from './ItemCard';
+import TitleInput from './TitleInput'
 import {buildUrl, fetchFromDb, fetchPosts, getItemsFromCategoryFromEtsy} from '../../dataHelperMethods';
 
 // Main page
@@ -8,9 +9,10 @@ class ItemContainer extends Component {
     super();
     this.state = {
       data: [],
-      categories: []
+      categories: [],
+      searchTitle: ''
     };
-
+    this.handleChange = this.handleChange.bind(this);
     this.getItemsFromCategory = this.getItemsFromCategory.bind(this);
   }
 
@@ -40,11 +42,20 @@ class ItemContainer extends Component {
     });
   }
 
+  handleChange(e) {
+    const value = e.target.value;
+    const name = e.target.name;
+    this.setState({
+      [name]: value
+    });
+  }
+
   render() {
+
     //create Item card for each item
     let itemsList = this.state.data.map(item => {
-      return (
-        <ItemCard key={item.listing_id} id={item.listing_id} data={item} title={item.title}tags={item.taxonomy_path} price={item.price} images={item.Images}/> );
+      const titleMatch = item.title.startsWith(this.state.searchTitle);
+      return (titleMatch) ? (<ItemCard key={item.listing_id} id={item.listing_id} data={item} title={item.title}tags={item.taxonomy_path} price={item.price} images={item.Images}/> ) : null;
     });
 
     let categoriesButtons = this.state.categories.map(cat => {
@@ -55,8 +66,7 @@ class ItemContainer extends Component {
       <div>
         <section className="section">
           {categoriesButtons}
-        </section>
-        <section className="section">
+          <div className="column is-4"><TitleInput name="searchTitle" label="Search items" value={this.state.searchTitle} handleChange={this.handleChange} /></div>
           <div className="columns is-multiline">
             {itemsList}
           </div>
