@@ -15,7 +15,6 @@ export const getItemsFromCategoryFromEtsy = (category) => {
   return `https://api.etsy.com/v2/listings/active.js?api_key=${etsyKey}&category=${category}&includes=Images`;
 };
 
-
 //fetch posts from etsy
 export const fetchPosts = (request) => {
   return fetchJsonp(request, {timeout: 10000})
