@@ -2,6 +2,7 @@ import React from 'react';
 import SaveButton from './SaveButton';
 import Tag from './Tag';
 import {postToDb, deleteFromDB} from '../../dataHelperMethods';
+import {DeleteBtn} from './DeleteBtn';
 
 class ItemDetail extends React.Component {
   constructor() {
@@ -43,8 +44,7 @@ class ItemDetail extends React.Component {
                 <hr/>
                 <Tag tags={this.state.data.tags ? this.state.data.tags : ['tags'] }/>
                 <hr/>
-                <SaveButton item={this.state.data}/>
-                <button onClick={(e) => this.deleteItem()}  >Delete</button>
+                { !this.state.boardName ? <SaveButton item={this.state.data}/> : <DeleteBtn onDelete={this.deleteItem}/> }
               </div>
             </div>
             <div className="column">
