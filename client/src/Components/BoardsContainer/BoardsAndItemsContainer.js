@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {fetchFromDb, fetchPosts} from '../../dataHelperMethods';
+import {fetchFromDb} from '../../dataHelperMethods';
 import AddToDbModal from './AddToDbModal';
 import {Link} from 'react-router-dom';
 
@@ -22,7 +22,6 @@ class BoardsAndItems extends Component {
     });
   }
 
-
   // open or close modal
   toggleModal() {
     this.setState({
@@ -41,7 +40,6 @@ class BoardsAndItems extends Component {
   render() {
     let boards = this.state.boards.map(board => {
       let items = [];
-
       for (let item of board.items) {
         items.push(
           <li className="items-li" key={board.boardName + item.listing_id}>
@@ -75,9 +73,6 @@ class BoardsAndItems extends Component {
       <section className="section">
         <button className="button is-primary is-pulled-right" onClick={this.toggleModal}>ADD BOARD</button>
         <h1 className="has-text-primary title">BOARDS</h1>
-
-
-
         <div className="container is-fluid">
           <div className="columns is-multiline is-4">
             {boards}

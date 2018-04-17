@@ -1,7 +1,7 @@
 import React from 'react';
 import SaveButton from './SaveButton';
 import Tag from './Tag';
-import {postToDb, deleteFromDB} from '../../dataHelperMethods';
+import {deleteFromDB} from '../../dataHelperMethods';
 import {DeleteBtn} from './DeleteBtn';
 
 class ItemDetail extends React.Component {
@@ -22,8 +22,12 @@ class ItemDetail extends React.Component {
       });
     }
   }
+
   deleteItem() {
     deleteFromDB(`/delete/${this.state.boardName}/${this.state.data.listing_id}`);
+    this.setState({
+      boardName: ''
+    });
   }
 
   render() {
@@ -44,7 +48,7 @@ class ItemDetail extends React.Component {
                 <hr/>
                 <Tag tags={this.state.data.tags ? this.state.data.tags : ['tags'] }/>
                 <hr/>
-                { !this.state.boardName ? <SaveButton item={this.state.data}/> : <DeleteBtn onDelete={this.deleteItem}/> }
+                { !this.state.boardName ? <SaveButton item={this.state.data}/> : <DeleteBtn onDelete={this.deleteItem} /> }
               </div>
             </div>
             <div className="column">

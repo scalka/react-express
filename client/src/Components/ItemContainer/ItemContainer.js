@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ItemCard from './ItemCard';
-import TitleInput from './TitleInput'
+import TitleInput from './TitleInput';
 import {buildUrl, fetchFromDb, fetchPosts, getItemsFromCategoryFromEtsy} from '../../dataHelperMethods';
 
 // Main page
@@ -41,7 +41,7 @@ class ItemContainer extends Component {
       });
     });
   }
-
+  // handle search input
   handleChange(e) {
     const value = e.target.value;
     const name = e.target.name;
@@ -51,7 +51,6 @@ class ItemContainer extends Component {
   }
 
   render() {
-
     //create Item card for each item
     let itemsList = this.state.data.map(item => {
       const titleMatch = item.title.startsWith(this.state.searchTitle);
