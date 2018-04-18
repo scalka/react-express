@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import AddToDbModal from '../BoardsContainer/AddToDbModal';
 import PropTypes from 'prop-types';
-import Tag from './Tag';
 
 class SaveButton extends Component {
   constructor() {

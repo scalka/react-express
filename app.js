@@ -74,19 +74,15 @@ app.post('/addItemToBoard', (req, res) => {
     });
 });
 
-app.post('/updateBoardName'), (req, res) => {
-
+app.post('/updateBoardName', (req, res) => {
   db.collection('boardsCollection').update(
     {boardName: req.body.boardName},
-    {$set: {boardName: "New name"}},
+    {$set: {boardName: 'New name'}},
     (err, result) => {
       res.send(result);
       if (err) { return console.log(err); }
-    }
-  );
-
+    });
 });
-
 
 // delete an item from board
 app.delete('/delete/:boardName/:index', (req, res) => {

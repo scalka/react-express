@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {fetchFromDb} from '../../dataHelperMethods';
 import PropTypes from 'prop-types';
-import Tag from '../ItemContainer/Tag';
 
 // Dropdown with all boards in db
 

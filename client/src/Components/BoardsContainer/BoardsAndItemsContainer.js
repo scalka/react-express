@@ -59,11 +59,6 @@ class BoardsAndItems extends Component {
               <p className="card-header-title">
                 {board.boardName.toUpperCase()}
               </p>
-              <a href="#" class="card-header-icon" aria-label="more options">
-                <span class="icon">
-                  <i class="fas fa-edit" aria-hidden="true"></i>
-                </span>
-              </a>
             </header>
             <div className="card-content">
               <ul className="items-ul">
