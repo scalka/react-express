@@ -65,7 +65,7 @@ class ItemContainer extends Component {
       <div>
         <section className="section">
           {categoriesButtons}
-          <div className="column is-4"><TitleInput name="searchTitle" label="Search items" value={this.state.searchTitle} handleChange={this.handleChange} /></div>
+          <div className="column is-3"><TitleInput name="searchTitle" label="Search items" value={this.state.searchTitle} handleChange={this.handleChange} /></div>
           <div className="columns is-multiline">
             {itemsList}
           </div>
