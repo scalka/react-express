@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76edb53d-32ab-4326-8f36-e6ba9dfa1322" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/routes/boards.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/routes/users.js" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -42,6 +46,16 @@
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="759">
+              <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -127,7 +141,6 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/client/node_modules/react-scripts/config/csp.js" />
         <option value="$PROJECT_DIR$/client/public/manifest.json" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/client/src/index.scss" />
         <option value="$PROJECT_DIR$/client/src/Components/ItemContainer/DeleteBtn.js" />
@@ -146,6 +159,7 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -195,43 +209,6 @@
               <item name="pinboard-react-express-mongo" type="b2602c69:ProjectViewProjectNode" />
               <item name="pinboard-react-express-mongo" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pinboard-react-express-mongo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pinboard-react-express-mongo" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pinboard-react-express-mongo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pinboard-react-express-mongo" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pinboard-react-express-mongo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pinboard-react-express-mongo" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="BoardsContainer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pinboard-react-express-mongo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pinboard-react-express-mongo" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="ItemContainer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pinboard-react-express-mongo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pinboard-react-express-mongo" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Menu" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -375,7 +352,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61783000" />
+    <option name="totallyTimeSpent" value="62134000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -633,13 +610,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -845,6 +815,14 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
