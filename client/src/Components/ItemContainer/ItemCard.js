@@ -7,7 +7,7 @@ import SaveButton from './SaveButton';
 class ItemCard extends React.Component {
   render() {
     return (
-      <div className="itemCard column is-4">
+      <div className="itemCard column is-3">
         <div className="card">
           <Link to={{
             pathname: `/itemDetail/${this.props.id}`,
