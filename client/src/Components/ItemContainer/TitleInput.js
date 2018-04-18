@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class TitleInput extends React.Component {
   render() {
@@ -15,5 +16,12 @@ class TitleInput extends React.Component {
     );
   }
 }
+;
 
+// Checks that the correct type of props are supplied:
+TitleInput.propTypes = {
+  name: PropTypes.string,
+  value: PropTypes.string,
+  label: PropTypes.string
+};
 export default TitleInput;

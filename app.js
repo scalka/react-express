@@ -73,8 +73,22 @@ app.post('/addItemToBoard', (req, res) => {
       if (err) { return console.log(err); }
     });
 });
-// delete an item from board
 
+app.post('/updateBoardName'), (req, res) => {
+
+  db.collection('boardsCollection').update(
+    {boardName: req.body.boardName},
+    {$set: {boardName: "New name"}},
+    (err, result) => {
+      res.send(result);
+      if (err) { return console.log(err); }
+    }
+  );
+
+});
+
+
+// delete an item from board
 app.delete('/delete/:boardName/:index', (req, res) => {
   console.log(req.params);
   db.collection('boardsCollection').update(
@@ -87,3 +101,4 @@ app.delete('/delete/:boardName/:index', (req, res) => {
       res.send(err);
     });
 });
+

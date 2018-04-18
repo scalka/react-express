@@ -1,5 +1,6 @@
 import React from 'react';
 import BoardsListDropdown from './BoardsListDropdown';
+import PropTypes from 'prop-types';
 
 // modal Elements such as header and body to be reused in different modal types with various content depending on modal
 
@@ -33,4 +34,10 @@ export const ModalBody = (props) => {
       </section>
     );
   }
+
+  // Checks that the correct type of props are supplied:
+  ModalBody.propTypes = {
+    url: PropTypes.string,
+    value: PropTypes.string
+  };
 };

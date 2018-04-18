@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import AddToDbModal from '../BoardsContainer/AddToDbModal';
+import PropTypes from 'prop-types';
+import Tag from './Tag';
 
 class SaveButton extends Component {
   constructor() {
@@ -32,5 +34,11 @@ class SaveButton extends Component {
     );
   }
 }
+
+
+// Checks that the correct type of props are supplied:
+SaveButton.propTypes = {
+  item: PropTypes.object
+};
 
 export default SaveButton;
