@@ -2,44 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76edb53d-32ab-4326-8f36-e6ba9dfa1322" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/es6-promise/lib/es6-promise.js" afterPath="$PROJECT_DIR$/client/node_modules/es6-promise/lib/es6-promise.js" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/escope/src/definition.js" afterPath="$PROJECT_DIR$/client/node_modules/escope/src/definition.js" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/esrecurse/gulpfile.babel.js" afterPath="$PROJECT_DIR$/client/node_modules/esrecurse/gulpfile.babel.js" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/fbjs/lib/equalsSet.js.flow" afterPath="$PROJECT_DIR$/client/node_modules/fbjs/lib/equalsSet.js.flow" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/fbjs/lib/everySet.js.flow" afterPath="$PROJECT_DIR$/client/node_modules/fbjs/lib/everySet.js.flow" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/fbjs/lib/someSet.js.flow" afterPath="$PROJECT_DIR$/client/node_modules/fbjs/lib/someSet.js.flow" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/handlebars/lib/precompiler.js" afterPath="$PROJECT_DIR$/client/node_modules/handlebars/lib/precompiler.js" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/history/es/createTransitionManager.js" afterPath="$PROJECT_DIR$/client/node_modules/history/es/createTransitionManager.js" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/jsx-ast-utils/__tests__/helper.js" afterPath="$PROJECT_DIR$/client/node_modules/jsx-ast-utils/__tests__/helper.js" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/jsx-ast-utils/src/getProp.js" afterPath="$PROJECT_DIR$/client/node_modules/jsx-ast-utils/src/getProp.js" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/jsx-ast-utils/src/hasProp.js" afterPath="$PROJECT_DIR$/client/node_modules/jsx-ast-utils/src/hasProp.js" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/postcss-discard-overridden/index.js" afterPath="$PROJECT_DIR$/client/node_modules/postcss-discard-overridden/index.js" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/postcss/lib/postcss.d.ts" afterPath="$PROJECT_DIR$/client/node_modules/postcss/lib/postcss.d.ts" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/react-router/es/MemoryRouter.js" afterPath="$PROJECT_DIR$/client/node_modules/react-router/es/MemoryRouter.js" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/react-router/es/Prompt.js" afterPath="$PROJECT_DIR$/client/node_modules/react-router/es/Prompt.js" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/react-router/es/Route.js" afterPath="$PROJECT_DIR$/client/node_modules/react-router/es/Route.js" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/react-router/es/Router.js" afterPath="$PROJECT_DIR$/client/node_modules/react-router/es/Router.js" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/react-router/es/Switch.js" afterPath="$PROJECT_DIR$/client/node_modules/react-router/es/Switch.js" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/react-router/es/matchPath.js" afterPath="$PROJECT_DIR$/client/node_modules/react-router/es/matchPath.js" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/react-router/es/withRouter.js" afterPath="$PROJECT_DIR$/client/node_modules/react-router/es/withRouter.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" afterPath="$PROJECT_DIR$/client/src/App.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.test.js" afterPath="$PROJECT_DIR$/client/src/App.test.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/BoardsContainer/AddToDbModal.js" afterPath="$PROJECT_DIR$/client/src/Components/BoardsContainer/AddToDbModal.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js" afterPath="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsListDropdown.js" afterPath="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsListDropdown.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/BoardsContainer/ModalElements.js" afterPath="$PROJECT_DIR$/client/src/Components/BoardsContainer/ModalElements.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/ItemContainer/DeleteBtn.js" afterPath="$PROJECT_DIR$/client/src/Components/ItemContainer/DeleteBtn.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemCard.js" afterPath="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemCard.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemContainer.js" afterPath="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemContainer.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemDetail.js" afterPath="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemDetail.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/ItemContainer/SaveButton.js" afterPath="$PROJECT_DIR$/client/src/Components/ItemContainer/SaveButton.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/ItemContainer/Tag.js" afterPath="$PROJECT_DIR$/client/src/Components/ItemContainer/Tag.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/ItemContainer/TitleInput.js" afterPath="$PROJECT_DIR$/client/src/Components/ItemContainer/TitleInput.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/Menu/Menu.js" afterPath="$PROJECT_DIR$/client/src/Components/Menu/Menu.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/dataHelperMethods.js" afterPath="$PROJECT_DIR$/client/src/dataHelperMethods.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" afterPath="$PROJECT_DIR$/client/src/index.js" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,8 +16,41 @@
       <file leaf-file-name="BoardsListDropdown.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsListDropdown.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+            <state relative-caret-position="646">
+              <caret line="40" column="10" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TitleInput.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/TitleInput.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="153">
+                <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -70,11 +66,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BoardsAndItemsContainer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BoardsAndItemsContainer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
               <caret line="60" column="18" lean-forward="false" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemCard.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/ItemCard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="41" column="10" lean-forward="true" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -132,7 +138,6 @@
         <option value="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemCard.js" />
         <option value="$PROJECT_DIR$/client/src/Components/ItemContainer/ItemDetail.js" />
         <option value="$PROJECT_DIR$/client/public/index.html" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/client/src/Components/ItemContainer/SaveButton.js" />
         <option value="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsListDropdown.js" />
         <option value="$PROJECT_DIR$/client/src/Components/BoardsContainer/AddToDbModal.js" />
@@ -140,6 +145,7 @@
         <option value="$PROJECT_DIR$/client/src/Components/ItemContainer/TitleInput.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -369,7 +375,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60536000" />
+    <option name="totallyTimeSpent" value="61783000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -561,9 +567,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="25" column="73" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="73" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -582,13 +586,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js___jb_old___" />
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/node_modules/react-dom/umd/react-dom.development.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
@@ -698,16 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="221">
-            <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/index.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -778,16 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/ItemCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/Components/BoardsContainer/ModalElements.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -800,14 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/TitleInput.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="77" lean-forward="false" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="77" />
           <folding />
         </state>
       </provider>
@@ -828,19 +797,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsListDropdown.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsAndItemsContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="60" column="18" lean-forward="false" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/ItemCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="41" column="10" lean-forward="true" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Components/ItemContainer/TitleInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Components/BoardsContainer/BoardsListDropdown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="40" column="10" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="153">
+            <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

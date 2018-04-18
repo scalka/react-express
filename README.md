@@ -7,7 +7,7 @@ Pin Board allows users to search for items from Etsy.com and save them to boards
 [Link to the Pin Board](https://pin-board-scalka.herokuapp.com/)
 
 # Setup
-1. Run ```mongod.exe```
+1. Set up database credentials in the .env file
 2. Run server ```node app.js```
 3. Run react from client folder ```npm start```
 
