@@ -35,7 +35,7 @@ class ItemDetail extends React.Component {
       return <span key={material}>{material} </span>;
     });
     const categories = this.state.data.category_path.map( cat => {
-      return <span key={cat}>{cat}</span>;
+      return <span key={cat}>{cat} </span>;
     });
 
     return (

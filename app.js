@@ -33,9 +33,9 @@ MongoClient.connect(url, (err, database) => {
 
 // ROUTING
 // send back React's index.html file
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/client/build/index.html'));
-});
+});*/
 // get boards and items assigned to boards
 app.get('/boardsCollection', (req, res) => {
   // find entries in the database, find returns cursor so we need to use toArray method
