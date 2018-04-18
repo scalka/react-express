@@ -1,14 +1,13 @@
-react + server https://daveceddia.com/create-react-app-express-backend/
-modal - https://daveceddia.com/open-modal-in-react/
+**Pin Board** is an application developed as a part of Advanced JavaScript module. 
+This application is built with JavaScript (ES6). The client-side is built with React and styled with Bulma.io. The server-side uses Express server running on Node.js. 
+The Mongo database is hosted on mLab. The application is deployed to Heroku.
+
+Pin Board allows users to search for items from Etsy.com and save them to boards. Boards are collections that organise content.   
+
+[Link to the Pin Board](https://pin-board-scalka.herokuapp.com/)
 
 # Setup
 1. Run ```mongod.exe```
 2. Run server ```node app.js```
-3. Run react ```npm start```
+3. Run react from client folder ```npm start```
 
-
-
-
-notes: Methods follow the same semantics as regular ES6 classes, meaning that they don't automatically bind this to the instance. You'll have to explicitly use .bind(this) or arrow functions =>
-<div onClick={() => this.tick()}>
-<div onClick={this.tick.bind(this)}>
